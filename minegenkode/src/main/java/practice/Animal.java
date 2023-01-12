@@ -7,14 +7,13 @@ public class Animal {
     }
 
     public static void doStuff() {
-
         int a = 5;
-        if (a == 0) {
 
-        } else if (a == 1) {
-
-        } else {
-
+        try {
+            
+            
+        } catch (Exception e) {
+            
+        }
         }
     }
-}

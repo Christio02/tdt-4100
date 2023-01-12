@@ -3,13 +3,17 @@ package practice;
 public class Practice {
 
     public static void main(String[] args) {
-        String name = "Jeg elsker Java";
+    //     String name = "Jeg elsker Java";
 
-        System.out.println(addExclamation(name));
+    //     System.out.println(addExclamation(name));
+
+    //     Animal a = new Animal();
+    //     String dog = Animal.iAmdDog();
+    //     System.out.println(dog);
 
         Animal a = new Animal();
-        String dog = Animal.iAmdDog();
-        System.out.println(dog);
+        Animal.doStuff();
+
 
     }
 
@@ -20,4 +24,7 @@ public class Practice {
 
     }
 
+
+
+    
 }
