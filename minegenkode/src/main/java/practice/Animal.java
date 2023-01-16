@@ -10,10 +10,9 @@ public class Animal {
         int a = 5;
 
         try {
-            
-            
+
         } catch (Exception e) {
-            
-        }
+
         }
     }
+}
