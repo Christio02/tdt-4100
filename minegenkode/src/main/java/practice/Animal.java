@@ -9,11 +9,5 @@ public class Animal {
     public static void doStuff() {
         int a = 5;
 
-        try {
-            
-            
-        } catch (Exception e) {
-            
-        }
         }
     }
