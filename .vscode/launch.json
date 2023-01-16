@@ -1,0 +1,273 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Digit",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.Digit",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Counter",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.Counter",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Dictionary",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Dictionary",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Funksjoner",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Funksjoner",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch If",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.If",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Input",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Input",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Itgk",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Itgk",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lister",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Lister",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Loop",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Loop",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Print",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Print",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Card",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.Card",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch DownCounter",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.DownCounter",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Frukt",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.Frukt",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hei",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.Hei",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Liste",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.Liste",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Random100",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.Random100",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Snitt",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.Snitt",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch TellNed",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.TellNed",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Timer",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.Timer",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Average",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.Average",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch AverageCoordinator",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.AverageCoordinator",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch DownCounter(1)",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.DownCounter",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch KaffePusher",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.KaffePusher",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Kake",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.Kake",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch MiniKafé",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.MiniKafé",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.Person",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Random100(1)",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.Random100",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch LesFraTerminal",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.LesFraTerminal",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Car",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.fasit.Car",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Counter",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.fasit.Counter",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Konstruktor",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.fasit.Konstruktor",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person(1)",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.fasit.Person",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.Practice",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "ovinger/oving0.HelloWorld",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch oving0",
+            "request": "launch",
+            "mainClass": "ovinger/oving0.oving0",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch TodoApp",
+            "request": "launch",
+            "mainClass": "todolist/todolist.fxui.TodoApp",
+            "projectName": "todolist-example"
+        },
+        {
+            "type": "java",
+            "name": "Launch TodoLauncher",
+            "request": "launch",
+            "mainClass": "todolist/todolist.fxui.TodoLauncher",
+            "projectName": "todolist-example"
+        }
+    ]
+}
