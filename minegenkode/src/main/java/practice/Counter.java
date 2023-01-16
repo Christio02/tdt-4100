@@ -1,7 +1,7 @@
 package practice;
 
 public class Counter {
-    
+
     int topp;
     int counter;
 
@@ -11,19 +11,19 @@ public class Counter {
     }
 
     public boolean count() { // hvis counter er mindre enn topp, øk counter med 1
-        
+
         if (this.counter < this.topp) {
-            this.counter ++;
-        }    
+            this.counter++;
+        }
 
         return this.topp == this.counter;
     }
 
-    public boolean count(int n) { 
-        
-        if (this.counter + n <= this.topp) { // nå kan vi ikke telle opp mer enn til 3, 
-            this.counter +=n; // ulovlig tilstand, siden man kan sette counter til mer enn topp
-        }    
+    public boolean count(int n) {
+
+        if (this.counter + n <= this.topp) { // nå kan vi ikke telle opp mer enn til 3,
+            this.counter += n; // ulovlig tilstand, siden man kan sette counter til mer enn topp
+        }
 
         return this.topp == this.counter;
     }
@@ -40,7 +40,4 @@ public class Counter {
         System.out.println(c.getCounter());
     }
 
-
-
 }
-
