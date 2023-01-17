@@ -14,8 +14,8 @@ public class DownCounter {
     public void countDown() {
         if (counter > 0) {
             counter -= 1;
-        }
-    }
+        }    
+}
 
     public static void main(String[] args) {
         DownCounter dc = new DownCounter(4);

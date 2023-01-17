@@ -6,86 +6,44 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch UpOrDownCounter",
+            "name": "Launch Car",
             "request": "launch",
-            "mainClass": "ovinger/oving1.UpOrDownCounter",
-            "projectName": "ovinger"
+            "mainClass": "foreksempel/uke3.Car",
+            "projectName": "foreksempel"
         },
         {
             "type": "java",
-            "name": "Launch Digit",
+            "name": "Launch Person",
             "request": "launch",
-            "mainClass": "ovinger/oving1.Digit",
-            "projectName": "ovinger"
+            "mainClass": "foreksempel/uke3.Person",
+            "projectName": "foreksempel"
         },
         {
             "type": "java",
             "name": "Launch Counter",
             "request": "launch",
-            "mainClass": "minegenkode/practice.Counter",
-            "projectName": "minegenkode"
+            "mainClass": "foreksempel/uke3.Counter",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Counter",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.fasit.Counter",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.fasit.Person",
+            "projectName": "foreksempel"
         },
         {
             "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Launch Dictionary",
-            "request": "launch",
-            "mainClass": "foreksempel/of0.kode.Dictionary",
-            "projectName": "foreksempel"
-        },
-        {
-            "type": "java",
-            "name": "Launch Funksjoner",
-            "request": "launch",
-            "mainClass": "foreksempel/of0.kode.Funksjoner",
-            "projectName": "foreksempel"
-        },
-        {
-            "type": "java",
-            "name": "Launch If",
-            "request": "launch",
-            "mainClass": "foreksempel/of0.kode.If",
-            "projectName": "foreksempel"
-        },
-        {
-            "type": "java",
-            "name": "Launch Input",
-            "request": "launch",
-            "mainClass": "foreksempel/of0.kode.Input",
-            "projectName": "foreksempel"
-        },
-        {
-            "type": "java",
-            "name": "Launch Itgk",
-            "request": "launch",
-            "mainClass": "foreksempel/of0.kode.Itgk",
-            "projectName": "foreksempel"
-        },
-        {
-            "type": "java",
-            "name": "Launch Lister",
-            "request": "launch",
-            "mainClass": "foreksempel/of0.kode.Lister",
-            "projectName": "foreksempel"
-        },
-        {
-            "type": "java",
-            "name": "Launch Loop",
-            "request": "launch",
-            "mainClass": "foreksempel/of0.kode.Loop",
-            "projectName": "foreksempel"
-        },
-        {
-            "type": "java",
-            "name": "Launch Print",
-            "request": "launch",
-            "mainClass": "foreksempel/of0.kode.Print",
-            "projectName": "foreksempel"
         },
         {
             "type": "java",
@@ -124,13 +82,6 @@
         },
         {
             "type": "java",
-            "name": "Launch Random100",
-            "request": "launch",
-            "mainClass": "foreksempel/uke2.Random100",
-            "projectName": "foreksempel"
-        },
-        {
-            "type": "java",
             "name": "Launch Snitt",
             "request": "launch",
             "mainClass": "foreksempel/uke2.Snitt",
@@ -155,6 +106,13 @@
             "name": "Launch Average",
             "request": "launch",
             "mainClass": "foreksempel/uke2.fasit.Average",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Average2",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.Average2",
             "projectName": "foreksempel"
         },
         {
@@ -201,9 +159,23 @@
         },
         {
             "type": "java",
-            "name": "Launch Random100(1)",
+            "name": "Launch Random100",
             "request": "launch",
             "mainClass": "foreksempel/uke2.fasit.Random100",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Random100_dashit",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.Random100_dashit",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Skall",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.Skall",
             "projectName": "foreksempel"
         },
         {
@@ -211,6 +183,7 @@
             "name": "Launch LesFraTerminal",
             "request": "launch",
             "mainClass": "foreksempel/uke3.LesFraTerminal",
+            "console": "integratedTerminal",
             "projectName": "foreksempel"
         },
         {
@@ -222,13 +195,6 @@
         },
         {
             "type": "java",
-            "name": "Launch Counter",
-            "request": "launch",
-            "mainClass": "foreksempel/uke3.fasit.Counter",
-            "projectName": "foreksempel"
-        },
-        {
-            "type": "java",
             "name": "Launch Konstruktor",
             "request": "launch",
             "mainClass": "foreksempel/uke3.fasit.Konstruktor",
@@ -236,30 +202,9 @@
         },
         {
             "type": "java",
-            "name": "Launch Person(1)",
-            "request": "launch",
-            "mainClass": "foreksempel/uke3.fasit.Person",
-            "projectName": "foreksempel"
-        },
-        {
-            "type": "java",
-            "name": "Launch Practice",
-            "request": "launch",
-            "mainClass": "minegenkode/practice.Practice",
-            "projectName": "minegenkode"
-        },
-        {
-            "type": "java",
             "name": "Launch HelloWorld",
             "request": "launch",
             "mainClass": "ovinger/oving0.HelloWorld",
-            "projectName": "ovinger"
-        },
-        {
-            "type": "java",
-            "name": "Launch oving0",
-            "request": "launch",
-            "mainClass": "ovinger/oving0.oving0",
             "projectName": "ovinger"
         },
         {

@@ -2,14 +2,14 @@ package uke2.fasit;
 
 public class AverageCoordinator {
 
-    Random100 random100;
-    Average average;
+    Random100_dashit random100;
+    Average2 average;
     DownCounter dc;
 
 
     public AverageCoordinator() {
-        this.random100 = new Random100();
-        this.average = new Average();
+        this.random100 = new Random100_dashit();
+        this.average = new Average2();
         dc = new DownCounter(10);
     }
 
