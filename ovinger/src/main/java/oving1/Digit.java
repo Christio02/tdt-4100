@@ -7,7 +7,7 @@ public class Digit {
     public Digit(int numSys, int siff) {
         this.numSys = numSys;
         this.siff = 0;
-    } 
+    }
 
     public int getValue() {
         return siff;
@@ -19,10 +19,9 @@ public class Digit {
 
     public boolean increment() {
         if (siff < numSys) {
-            siff ++;
+            siff++;
             return false;
-        }
-        else {
+        } else {
             siff = 0;
             return true;
         }
