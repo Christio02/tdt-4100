@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch UpOrDownCounter",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.UpOrDownCounter",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Location",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.Location",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Account",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.Account",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Storage",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.scratch.Storage",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
+            "name": "Launch Year",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.scratch.Year",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
             "name": "Launch Car",
             "request": "launch",
             "mainClass": "foreksempel/uke3.Car",

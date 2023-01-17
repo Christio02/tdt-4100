@@ -2,8 +2,8 @@ package practice;
 
 public class Counter {
 
-    int topp;
-    int counter;
+    private int topp;
+    private int counter;
 
     public Counter(int topp) { // definerer kosntruktøren, lager objekt
         this.topp = topp;

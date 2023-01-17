@@ -1,8 +1,8 @@
 package practice;
 
 public class Person {
-    String navn; // holder rede på tilstanden til objektet person
-    int alder;
+    private String navn; // holder rede på tilstanden til objektet person
+    private int alder;
 
     public Person(String navn, int alder) { // constructor
         this.alder = alder;

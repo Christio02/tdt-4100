@@ -2,7 +2,7 @@ package oving1;
 
 public class UpOrDownCounter {
 
-    int start;
+    int start; // tilstander 
     int end;
     int counter;
 
@@ -18,7 +18,7 @@ public class UpOrDownCounter {
     public boolean count() {
         if (this.counter > this.end) {
             this.counter--;
-            return true;
+            return true;    
 
         } else if (this.counter < this.end) {
             this.counter++;
