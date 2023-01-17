@@ -6,6 +6,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch UpOrDownCounter",
             "request": "launch",
             "mainClass": "ovinger/oving1.UpOrDownCounter",
@@ -17,13 +18,45 @@
             "request": "launch",
             "mainClass": "ovinger/oving1.Digit",
             "projectName": "ovinger"
+=======
+            "name": "Launch Car",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.Car",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.Person",
+            "projectName": "foreksempel"
+>>>>>>> fagstab/main
         },
         {
             "type": "java",
             "name": "Launch Counter",
             "request": "launch",
+<<<<<<< HEAD
             "mainClass": "minegenkode/practice.Counter",
             "projectName": "minegenkode"
+=======
+            "mainClass": "foreksempel/uke3.Counter",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Counter",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.fasit.Counter",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.fasit.Person",
+            "projectName": "foreksempel"
+>>>>>>> fagstab/main
         },
         {
             "type": "java",
@@ -33,6 +66,7 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch Dictionary",
             "request": "launch",
             "mainClass": "foreksempel/of0.kode.Dictionary",
@@ -89,6 +123,8 @@
         },
         {
             "type": "java",
+=======
+>>>>>>> fagstab/main
             "name": "Launch Card",
             "request": "launch",
             "mainClass": "foreksempel/uke2.Card",
@@ -124,6 +160,7 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch Random100",
             "request": "launch",
             "mainClass": "foreksempel/uke2.Random100",
@@ -131,6 +168,8 @@
         },
         {
             "type": "java",
+=======
+>>>>>>> fagstab/main
             "name": "Launch Snitt",
             "request": "launch",
             "mainClass": "foreksempel/uke2.Snitt",
@@ -159,6 +198,16 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
+=======
+            "name": "Launch Average2",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.Average2",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+>>>>>>> fagstab/main
             "name": "Launch AverageCoordinator",
             "request": "launch",
             "mainClass": "foreksempel/uke2.fasit.AverageCoordinator",
@@ -201,9 +250,32 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch Random100(1)",
+=======
+            "name": "Launch Random100",
+>>>>>>> fagstab/main
             "request": "launch",
             "mainClass": "foreksempel/uke2.fasit.Random100",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+<<<<<<< HEAD
+            "name": "Launch LesFraTerminal",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.LesFraTerminal",
+=======
+            "name": "Launch Random100_dashit",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.Random100_dashit",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Skall",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.fasit.Skall",
             "projectName": "foreksempel"
         },
         {
@@ -211,6 +283,8 @@
             "name": "Launch LesFraTerminal",
             "request": "launch",
             "mainClass": "foreksempel/uke3.LesFraTerminal",
+            "console": "integratedTerminal",
+>>>>>>> fagstab/main
             "projectName": "foreksempel"
         },
         {
@@ -222,6 +296,7 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch Counter",
             "request": "launch",
             "mainClass": "foreksempel/uke3.fasit.Counter",
@@ -229,6 +304,8 @@
         },
         {
             "type": "java",
+=======
+>>>>>>> fagstab/main
             "name": "Launch Konstruktor",
             "request": "launch",
             "mainClass": "foreksempel/uke3.fasit.Konstruktor",
@@ -236,6 +313,7 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch Person(1)",
             "request": "launch",
             "mainClass": "foreksempel/uke3.fasit.Person",
@@ -250,6 +328,8 @@
         },
         {
             "type": "java",
+=======
+>>>>>>> fagstab/main
             "name": "Launch HelloWorld",
             "request": "launch",
             "mainClass": "ovinger/oving0.HelloWorld",
@@ -257,6 +337,7 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch oving0",
             "request": "launch",
             "mainClass": "ovinger/oving0.oving0",
@@ -264,6 +345,8 @@
         },
         {
             "type": "java",
+=======
+>>>>>>> fagstab/main
             "name": "Launch TodoApp",
             "request": "launch",
             "mainClass": "todolist/todolist.fxui.TodoApp",

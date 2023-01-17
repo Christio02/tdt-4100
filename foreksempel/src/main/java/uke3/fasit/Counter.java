@@ -41,19 +41,22 @@ public class Counter {
         // System.out.println("getcounter: "+counter.getCounter());
         // System.out.println("count: "+counter.count()); 
 
-        Counter counter2 = new Counter(3);
-        System.out.println("getcounter: "+counter2.getCounter());
-        System.out.println("count: "+counter2.count(1));
-        System.out.println("getcounter: "+counter2.getCounter());
-        System.out.println("count: "+counter2.count(100));
-        System.out.println("getcounter: "+counter2.getCounter());
-        System.out.println("count: "+counter2.count(1));
-        System.out.println("getcounter: "+counter2.getCounter());
-        System.out.println("count: "+counter2.count(1));
-        counter2.counter = 1000;
-        System.out.println("getcounter: "+counter2.getCounter());
-        System.out.println("count: "+counter2.count(1));
-        System.out.println(counter.getCounter());
+        Counter counter2 = new Counter(10);
+        // while (!counter2.count()) {
+        //     System.out.println("Teller: "+counter2.getCounter());
+        // }
+        // System.out.println("getcounter: "+counter2.getCounter());
+        // System.out.println("count: "+counter2.count(1));
+        // System.out.println("getcounter: "+counter2.getCounter());
+        // System.out.println("count: "+counter2.count(100));
+        // System.out.println("getcounter: "+counter2.getCounter());
+        // System.out.println("count: "+counter2.count(1));
+        // System.out.println("getcounter: "+counter2.getCounter());
+        // System.out.println("count: "+counter2.count(1));
+        // counter2.counter = 1000;
+        // System.out.println("getcounter: "+counter2.getCounter());
+        // System.out.println("count: "+counter2.count(1));
+        // System.out.println(counter.getCounter());
 
 
 
