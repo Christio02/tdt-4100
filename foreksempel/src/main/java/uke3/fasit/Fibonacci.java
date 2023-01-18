@@ -1,4 +1,4 @@
-package uke3;
+package uke3.fasit;
 
 public class Fibonacci {
     
@@ -16,9 +16,10 @@ public class Fibonacci {
 	
 	public static void main(String[] args) {
 		// spørre etter i etter løkken der den deklareres
-		for (int i = 0; i < 10; i++) {
-			if (i > 5) break;
-		}
+		// for (int i = 0; i < 10; i++) {
+		// 	if (i > 5) break;
+		// 	System.out.println(i);
+		// }
 
 		System.out.println(foo(14));
 	}

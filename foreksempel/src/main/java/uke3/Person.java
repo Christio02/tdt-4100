@@ -1,8 +1,8 @@
 package uke3;
 
 public class Person {
-    String navn;
-    int alder;
+    private String navn;
+    private int alder;
 
     public Person(String navn, int alder) {
         this.alder = alder;
@@ -22,9 +22,18 @@ public class Person {
         return this.navn + "("+this.alder+")";
     }
 
+    public static void navn() {
+        System.out.println(4334);
+    }
+
     public static void main(String[] args) {
         Person p = new Person("Ida ", 33);
         System.out.println(p.getAlder());
         System.out.println(p);
+        p.navn = "Per";
+        System.out.println(p.getNavn());
+
+        
+        
     }
 }
