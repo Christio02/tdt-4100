@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Dictionary",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Dictionary",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lister",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Lister",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Input",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Input",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Validate",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.input.Validate",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
             "name": "Launch UpOrDownCounter",
             "request": "launch",
             "mainClass": "ovinger/oving1.UpOrDownCounter",

@@ -2,8 +2,8 @@ package uke3;
 
 public class Counter {
     
-    int topp;
-    int counter;
+    private int topp;
+    private int counter;
 
 
     public Counter(int topp) {
@@ -31,12 +31,16 @@ public class Counter {
         return counter;
     }
 
+
     public static void main(String[] args) {
         Counter c = new Counter(3);
         System.out.println(c.getCounter());
         System.out.println(c.count(100));
         System.out.println(c.count(2));
         System.out.println(c.getCounter());
+        c.counter = 10000000;
+        System.out.println(c.getCounter());
+
     }
 
 }
