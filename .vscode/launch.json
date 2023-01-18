@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Validate",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.input.Validate",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
             "name": "Launch UpOrDownCounter",
             "request": "launch",
             "mainClass": "ovinger/oving1.UpOrDownCounter",
