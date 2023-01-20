@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Itgk",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Itgk",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
             "name": "Launch Dictionary",
             "request": "launch",
             "mainClass": "foreksempel/of0.kode.Dictionary",
