@@ -2,34 +2,33 @@ package uke4;
 
 public class Bok {
     
-    private String tittel;
+    private String tittel; // tilstander
     private int antallSider;
     private int hvorLangtLest;
 
-    public Bok(String tittel, int antallSider) {
+    public Bok(String tittel, int antallSider) { // constructor
         super();
         this.tittel = tittel;
         this.antallSider = antallSider;
     }
 
-    public String getTittel() {
+    public String getTittel() { // get tittel
         return tittel;
     }
 
     @Override
-    public String toString() {
-        // TODO Auto-generated method stub
+    public String toString() { // to String method
         return tittel+" ("+hvorLangtLest+"/"+antallSider+")";
     }
 
-    private boolean kanLeseSider(int sider) {
+    private boolean kanLeseSider(int sider) { // return true if you've read less than total pages
         if ((hvorLangtLest + sider) <= antallSider) {
             return true;
         }
         return false;
     } 
 
-    private void lestSider(int siderLest) {
+    private void lestSider(int siderLest) { // add pages if kanLeseSider is true
         if (kanLeseSider(siderLest)) {
             hvorLangtLest += siderLest;
         }
