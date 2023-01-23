@@ -7,7 +7,7 @@ public record ViseRecord(String first, String last) {
     }
 
     public static void main(String[] args) {
-        ViseRecord vr = new ViseRecord("Børge", "Haugset");
+        ViseRecord vr = new ViseRecord("Børge","Haugset");
         System.out.println(vr);
         System.out.println(vr.first);
         System.out.println(vr.whole());

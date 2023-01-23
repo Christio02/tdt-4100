@@ -2,59 +2,52 @@ package uke4;
 
 public class Bok {
     
-    private String tittel; // tilstander
+    private String tittel;
     private int antallSider;
-    private int hvorLangt; // should start at 0
-     
+    private int hvorLangtLest;
 
-    // constructor 
     public Bok(String tittel, int antallSider) {
         super();
         this.tittel = tittel;
         this.antallSider = antallSider;
     }
 
-
     public String getTittel() {
         return tittel;
     }
 
-    public int getAntallSider() {
-        return antallSider;
-    }
-
-    private void lestSider(int siderLest) {
-        if(kanLeseSider(siderLest)) {
-            hvorLangt += siderLest;
-        }
-        else {
-            System.out.println("Kan ikke lese");
-        }
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return tittel+" ("+hvorLangtLest+"/"+antallSider+")";
     }
 
     private boolean kanLeseSider(int sider) {
-        if ((hvorLangt + sider) <= antallSider) {
-            return false;
+        if ((hvorLangtLest + sider) <= antallSider) {
+            return true;
         }
-        return true;
+        return false;
+    } 
+
+    private void lestSider(int siderLest) {
+        if (kanLeseSider(siderLest)) {
+            hvorLangtLest += siderLest;
+        }
+        else {
+            System.out.println("kan Ikke lese ");
+        }
     }
 
-    
-    @Override
-    public String toString() {
-        return tittel + ": " + "" + "/" + " " + antallSider;
-    }
-    
     public static void main(String[] args) {
-        Bok bok = new Bok("Game of Thrones", 700);
-        
+        Bok bok = new Bok("1984", 167);
+        System.out.println(bok.toString());
+
+        bok.lestSider(20);
         System.out.println(bok);
-    
-        bok.lestSider(30);
+        bok.lestSider(2000);
         System.out.println(bok);
+
+
+
     }
-
-
-    
- 
 }
