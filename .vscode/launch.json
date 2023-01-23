@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BokHylle",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.BokHylle",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch ViseRecord",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.ViseRecord",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
             "name": "Launch Bok",
             "request": "launch",
             "mainClass": "foreksempel/uke4.Bok",
