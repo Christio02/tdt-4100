@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Bok",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.Bok",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
             "name": "Launch Stopwatch",
             "request": "launch",
             "mainClass": "ovinger/oving1.Stopwatch",
