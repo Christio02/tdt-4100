@@ -1,7 +1,7 @@
 package uke4;
 
 public class Bok {
-    
+
     private String tittel; // tilstander
     private int antallSider;
     private int hvorLangtLest;
@@ -11,7 +11,6 @@ public class Bok {
         this.tittel = tittel;
         this.antallSider = antallSider;
     }
-
 
     public Bok(String tittel, int antallSider, int hvorLangtLest) {
         super();
@@ -23,26 +22,24 @@ public class Bok {
         this.hvorLangtLest = hvorLangtLest;
     }
 
-
     public String getTittel() { // get tittel
         return tittel;
     }
 
     @Override
     public String toString() { // to String method
-        return tittel+" ("+hvorLangtLest+"/"+antallSider+")";
+        return tittel + " (" + hvorLangtLest + "/" + antallSider + ")";
     }
 
     private boolean kanLeseSider(int sider) { // return true if you've read less than total pages
         return (sider + hvorLangtLest) <= antallSider; // return påstand? Hvis sann, return blah blah etc
-    } 
+    }
 
     private void lestSider(int siderLest) { // add pages if kanLeseSider is true
         if (kanLeseSider(siderLest)) {
             hvorLangtLest += siderLest;
-        }
-        else {
-            System.out.println("Kan ikke lese ");
+        } else {
+            throw new IllegalStateException("Du prøver å lese flere sider enn boken!");
         }
     }
 
@@ -50,14 +47,15 @@ public class Bok {
         Bok bok = new Bok("Game of Thrones", 700);
         System.out.println(bok);
 
-        // bok.lestSider(20);
-        // System.out.println(bok);
-        // bok.lestSider(346);
-        // System.out.println(bok);
-        // bok.lestSider(822);
-        // System.out.println(bok);
+        try {
+            bok.lestSider(2000);
+            System.out.println(bok);
+        } catch (Exception e) {
+            System.out.println("Feil utløst");
 
-        Bok bok2 = new Bok("Rødhette", 34, 22);
+        }
+
+        Bok bok2 = new Bok("Rødhette", 23);
         System.out.println(bok2);
     }
 }
