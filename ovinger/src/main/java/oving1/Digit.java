@@ -27,6 +27,12 @@ public class Digit {
         }
     }
 
+    @Override
+    public String toString() {
+
+        return toString();
+    }
+
     public static void main(String[] args) {
         Digit n = new Digit(10, 2);
         System.out.println(n.getValue());
