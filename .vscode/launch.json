@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BokHylle",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.BokHylle",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch ViseRecord",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.ViseRecord",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Bok",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.Bok",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Stopwatch",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.Stopwatch",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Itgk",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Itgk",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
             "name": "Launch Dictionary",
             "request": "launch",
             "mainClass": "foreksempel/of0.kode.Dictionary",
