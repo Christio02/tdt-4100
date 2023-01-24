@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Account",
+            "request": "launch",
+            "mainClass": "ovinger/oving2.Account",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person",
+            "request": "launch",
+            "mainClass": "ovinger/oving2.Person",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Car",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.carworld.Car",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Plate",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.carworld.Plate",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.carworld.Person",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person2",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.Person2",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person1",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.Person1",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
             "name": "Launch BokHylle",
             "request": "launch",
             "mainClass": "foreksempel/uke4.BokHylle",

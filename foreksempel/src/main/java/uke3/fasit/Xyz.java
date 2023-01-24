@@ -1,4 +1,4 @@
-package uke3;
+package uke3.fasit;
 
 public class Xyz {
 

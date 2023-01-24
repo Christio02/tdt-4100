@@ -1,0 +1,8 @@
+1. Sannsynlighetsmodifikator:
+- En sannsynlighetsmodifikator er en modifikator som bestemmer synligheten til metoder
+- eller felter i en klasse
+
+2. Hva er forskjellen på private og public og når brukes de?
+- Forskjellen på private og public, er at private gjør metoder/felter utilgjengelig for andre klasser en dems egen, mens public gjør at alle klasser kan ha tilgang til det.
+- Private benyttes ofte for felter/attributter siden man ikke vil at andre klasser skal ha tilgang til å evt. endre disse.
+- Public benyttes til metoder/operasjoner som en annen klasse skal ha tilgang til, eks. når man vil at to klasser skal "snakke" sammen.
