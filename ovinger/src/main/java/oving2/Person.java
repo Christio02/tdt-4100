@@ -1,6 +1,7 @@
 package oving2;
 
 import java.util.Date;
+
 public class Person {
     // states
     private String name;
@@ -38,18 +39,10 @@ public class Person {
         return name;
     }
 
-
-
-
-
+    // sets email
     public void setEmail(String email) {
 
-
     }
-
-
-
-
 
     @Override
     public String toString() {
@@ -59,7 +52,7 @@ public class Person {
     public static void main(String[] args) {
         Person p1 = new Person("Chris", "Høe");
         System.out.println(p1);
-        //should throw error
+        // should throw error
         // Person p2 = new Person("D", "H");
 
     }
