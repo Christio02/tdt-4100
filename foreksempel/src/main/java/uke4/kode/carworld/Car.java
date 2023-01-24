@@ -5,27 +5,32 @@ import java.util.Collection;
 
 public class Car {
 
-    private Plate plate; // accesses the plate class
+    private String plate; // accesses the plate class
     private Person driver; // accesses the Person class
     private Collection<Person> passengers = new ArrayList<>(); // makes a collection of passengers, kinda like a set,
                                                                // but can have copies
     private int seats;
 
     public Car(String regNr, Person driver, int seats) {
-        this.driver = driver;
-        this.plate = new Plate(regNr);
+        this.setDriver(driver);
+        this.setPlate(regNr);
         this.passengers = new ArrayList<Person>();
-        setSeats(seats);
+        this.setSeats(seats);
 
     }
 
     private void setPlate(String regNr) {
+        this.checkRegNr(regNr);
+        this.plate = regNr;
+
+    }
+
+    private void checkRegNr(String regNr) {
         if (Plate.isValid(regNr)) {
             this.plate = regNr;
         } else {
             throw new IllegalArgumentException("Ugyldig regnr");
         }
-
     }
 
     public void setDriver(Person p) {
