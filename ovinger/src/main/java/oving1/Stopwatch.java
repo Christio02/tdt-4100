@@ -3,21 +3,21 @@ package oving1;
 import java.util.Scanner;
 
 public class Stopwatch {
-    private static Scanner data = new Scanner(System.in);
+    // states
+    private boolean running = false; // default state, before we start the stopwatch
+    private int ticks; // state for holding each tick state
+    private int ticksStarted; // calculating ticks since started
+    private int lap;
 
-    private boolean running = false;
-    private int ticks;
-    private int ticksStarted;
-
-    public void tick(int tick) {
-        this.ticks =+ tick;
+    public void tick(int tick) { // increments tick
+        this.ticks = +tick;
     }
 
-    public void start() {
+    public void start() { // sets running to true
         this.running = true;
     }
 
-    public void stop() {
+    public void stop() { // sets runnin to false
         this.running = false;
     }
 
@@ -31,13 +31,20 @@ public class Stopwatch {
     }
 
     public int getTicks() {
-        return ticks; // converts long to int and returns total milliseconds
+        return ticks; // returns total ticks since life of clock
     }
 
-    // public int getTime() {
+    public int getTime() {
+        if (!isStarted()) {
+            return -1;
+        } else if (isStarted() && !isStopped()) {
+            return ticks;
 
-        
-    // }
+        } else {
+            return ticks;
+        }
+
+    }
 
     public static void main(String[] args) {
 
