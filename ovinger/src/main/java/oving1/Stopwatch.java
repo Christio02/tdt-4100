@@ -5,51 +5,39 @@ import java.util.Scanner;
 public class Stopwatch {
     private static Scanner data = new Scanner(System.in);
 
-    private long start = 0;
-    private long stop = 0;
-    private boolean isRunning = false;
+    private boolean running = false;
+    private int ticks;
+    private int ticksStarted;
 
-    public void tick(int ticks) {
-
+    public void tick(int tick) {
+        this.ticks =+ tick;
     }
 
     public void start() {
-        this.start = System.currentTimeMillis();
-        this.isRunning = true;
+        this.running = true;
     }
 
     public void stop() {
-        this.stop = System.currentTimeMillis();
-        this.isRunning = false;
+        this.running = false;
     }
 
     public boolean isStarted() {
-        if (isRunning == true) {
-            return true;
-        }
-        return false;
+        return running; // returns the current state
     }
 
     public boolean isStopped() {
-        if (isRunning == false) {
-            return true;
-        }
-        return false;
+        return !running;
+
     }
 
     public int getTicks() {
-        return (int) (stop - start); // converts long to int and returns total milliseconds
+        return ticks; // converts long to int and returns total milliseconds
     }
 
-    public int getTime() {
-        if (isStarted() == false) {
-            return -1;
-        } else if (isRunning == true && isStopped() == false) {
-            return (int) (this.stop - this.start);
-        } else {
-            return (int) (stop - start);
-        }
-    }
+    // public int getTime() {
+
+        
+    // }
 
     public static void main(String[] args) {
 
