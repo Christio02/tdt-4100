@@ -3,52 +3,47 @@ package oving1;
 import java.util.Scanner;
 
 public class Stopwatch {
-    private static Scanner data = new Scanner(System.in);
+    // states
+    private boolean running = false; // default state, before we start the stopwatch
+    private int ticks; // state for holding each tick state
+    private int ticksStarted; // calculating ticks since started
+    private int lap;
 
-    private long start = 0;
-    private long stop = 0;
-    private boolean isRunning = false;
-
-    public void tick(int ticks) {
-
+    public void tick(int tick) { // increments tick
+        this.ticks = +tick;
     }
 
-    public void start() {
-        this.start = System.currentTimeMillis();
-        this.isRunning = true;
+    public void start() { // sets running to true
+        this.running = true;
     }
 
-    public void stop() {
-        this.stop = System.currentTimeMillis();
-        this.isRunning = false;
+    public void stop() { // sets runnin to false
+        this.running = false;
     }
 
     public boolean isStarted() {
-        if (isRunning == true) {
-            return true;
-        }
-        return false;
+        return running; // returns the current state
     }
 
     public boolean isStopped() {
-        if (isRunning == false) {
-            return true;
-        }
-        return false;
+        return !running;
+
     }
 
     public int getTicks() {
-        return (int) (stop - start); // converts long to int and returns total milliseconds
+        return ticks; // returns total ticks since life of clock
     }
 
     public int getTime() {
-        if (isStarted() == false) {
+        if (!isStarted()) {
             return -1;
-        } else if (isRunning == true && isStopped() == false) {
-            return (int) (this.stop - this.start);
+        } else if (isStarted() && !isStopped()) {
+            return ticks;
+
         } else {
-            return (int) (stop - start);
+            return ticks;
         }
+
     }
 
     public static void main(String[] args) {
