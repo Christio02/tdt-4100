@@ -28,7 +28,6 @@ public class Car {
         Car c = new Car();
         // c.setEier(p);
         System.out.println(c.getEier());
-        p.navn = "Albertine";
     }
 
 }
