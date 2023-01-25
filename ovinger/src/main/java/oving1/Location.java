@@ -2,8 +2,8 @@ package oving1;
 
 public class Location {
 
-    int x = 0;
-    int y = 0;
+    private int x;
+    private int y;
 
     public void up() {
         y = y - 1;
