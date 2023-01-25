@@ -1,8 +1,6 @@
 package oving1;
 
-import java.util.Scanner;
-
-public class Stopwatch {
+public class StopWatch {
     // states
     private boolean running = false; // default state, before we start the stopwatch
     private int ticks; // state for holding each tick state
@@ -10,14 +8,14 @@ public class Stopwatch {
     private int lap;
 
     public void tick(int tick) { // increments tick
-        this.ticks = +tick;
+        this.ticks += tick;
     }
 
     public void start() { // sets running to true
         this.running = true;
     }
 
-    public void stop() { // sets runnin to false
+    public void stop() { // sets running to false
         this.running = false;
     }
 
@@ -37,8 +35,6 @@ public class Stopwatch {
     public int getTime() {
         if (!isStarted()) {
             return -1;
-        } else if (isStarted() && !isStopped()) {
-            return ticks;
 
         } else {
             return ticks;
@@ -47,8 +43,6 @@ public class Stopwatch {
     }
 
     public static void main(String[] args) {
-
-        System.out.println("Write something to start the stopwatch: ");
 
     }
 

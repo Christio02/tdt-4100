@@ -13,10 +13,10 @@ public class RectangleExtraTest {
     @Test
     @DisplayName("Intersecting rectangles")
     void testIntersection() {
-        Stopwatch rect1 = new Stopwatch(0, 0, 5, 5);
-        Stopwatch rect2 = new Stopwatch(3, 3, 7, 7);
+        StopWatch rect1 = new StopWatch(0, 0, 5, 5);
+        StopWatch rect2 = new StopWatch(3, 3, 7, 7);
 
-        Stopwatch intersection = rect1.intersection(rect2);
+        StopWatch intersection = rect1.intersection(rect2);
         assertValues(intersection, 3, 3, 5, 5, 2, 2, " for intersecting rectangle");
 
         assertTrue(rect1.intersects(rect2), "Wrong value from #intersects(Rectangle)");
@@ -25,10 +25,10 @@ public class RectangleExtraTest {
     @Test
     @DisplayName("Non-intersecting rectangles")
     void testNonIntersection() {
-        Stopwatch rect1 = new Stopwatch(-3, -3, 0, 0);
-        Stopwatch rect2 = new Stopwatch(3, 3, 7, 7);
+        StopWatch rect1 = new StopWatch(-3, -3, 0, 0);
+        StopWatch rect2 = new StopWatch(3, 3, 7, 7);
 
-        Stopwatch intersection = rect1.intersection(rect2);
+        StopWatch intersection = rect1.intersection(rect2);
         assertNull(intersection, "Intersection of two non-intersecting rectangles should be null");
         assertFalse(rect1.intersects(rect2), "Wrong value from #intersects(Rectangle)");
     }
