@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Car",
+            "request": "launch",
+            "mainClass": "foreksempel/of1.kode.Car",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Book",
+            "request": "launch",
+            "mainClass": "foreksempel/of1.Book",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
             "name": "Launch StopWatch",
             "request": "launch",
             "mainClass": "ovinger/oving1.StopWatch",
