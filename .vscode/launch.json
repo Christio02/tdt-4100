@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch StopWatch",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.StopWatch",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
             "name": "Launch Account",
             "request": "launch",
             "mainClass": "ovinger/oving2.Account",
