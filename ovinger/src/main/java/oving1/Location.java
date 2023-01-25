@@ -43,4 +43,5 @@ public class Location {
         System.out.println(l.getY());
 
     }
+
 }
