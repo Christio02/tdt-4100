@@ -6,7 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class LineEditorTest {
-	private Location lineEditor;
+	private LineEditor lineEditor;
 
 	private void checkEditorContent(String s) {
 		Assertions.assertEquals(s, lineEditor.toString(), "Wrong value returned by toString()");
@@ -18,7 +18,7 @@ public class LineEditorTest {
 
 	@BeforeEach
 	public void setup() {
-		lineEditor = new Location();
+		lineEditor = new LineEditor();
 	}
 
 	@Test

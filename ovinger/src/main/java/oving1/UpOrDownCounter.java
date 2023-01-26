@@ -2,9 +2,8 @@ package oving1;
 
 public class UpOrDownCounter {
 
-    int start; // tilstander
-    int end;
-    int counter;
+    private int end;
+    private int counter;
 
     public UpOrDownCounter(int start, int end) { // constructor
         this.counter = start;
@@ -36,6 +35,7 @@ public class UpOrDownCounter {
         } else if (this.counter > this.end) {
             this.counter--;
             return true;
+
         } else {
             return false;
         }

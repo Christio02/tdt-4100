@@ -2,8 +2,8 @@ package oving1;
 
 public class Account {
 
-    double balance = 0.0;
-    double interestRate = 0.0;
+    private double balance = 0.0;
+    private double interestRate = 0.0;
 
     public double getBalance() {
         return this.balance;
