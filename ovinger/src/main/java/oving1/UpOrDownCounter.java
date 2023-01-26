@@ -2,7 +2,6 @@ package oving1;
 
 public class UpOrDownCounter {
 
-    private int start; // tilstander
     private int end;
     private int counter;
 
