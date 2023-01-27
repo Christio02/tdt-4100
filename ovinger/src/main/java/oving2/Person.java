@@ -11,15 +11,30 @@ public class Person {
     private char gender;
 
     // constructor
-    public Person(String name, char gender) {
-        setName(name);
-        setGender(gender);
+    public Person() {
+
     }
 
     // setters
 
     // sets name
     public void setName(String name) {
+
+        if (!name.contains(" ")) { // Checks if name contains whitespace to determine if it has a surname or not
+
+            throw new IllegalArgumentException("Navnet har ikke etternavn!");
+        }
+
+        for (int i = 0; i < name.length(); i++) {
+            char d = name.charAt(i);
+            if (!Character.isLetter(d)) { // goes through string to look for illegal characters, name.trim() removes whitespace so that isletter does not trigger
+                throw new IllegalArgumentException("Navnet kan bare inneholde bokstaver!");
+            }
+            else if (name.trim() == "") {
+
+            }
+        }
+        
         if (name.split(" ").length > 2) {
             throw new IllegalArgumentException("Kan ikke ha mellomnavn!");
         }
@@ -48,12 +63,12 @@ public class Person {
 
     // sets birthday
 
-    public void setBirthday(int i) {
+    public void setBirthday(Date birthdate) {
         Date today = new Date();
-        if (i.compareTo(today) > 0) { // checks if birtday is newer than todays date
+        if (birthdate.compareTo(today) > 0) { // checks if birtday is newer than todays date
             throw new IllegalArgumentException("Kan ikke ha bursdag fram i tid!");
         }
-        this.birthdate = i;
+        this.birthdate = birthdate;
     }
 
     // gets birtday
@@ -68,6 +83,7 @@ public class Person {
 
     // check if email is valid
     // public boolean isValidEmail(String email) {
+         
 
     // }
 
@@ -94,7 +110,8 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person p1 = new Person("Christopher Hoe", 'M');
+        Person p1 = new Person();
+        p1.setName("Christopher Høe");
         System.out.println(p1);
 
     }
