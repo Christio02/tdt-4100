@@ -10,15 +10,11 @@ public class Person {
     private Date birthdate;
     private char gender;
 
-    // constructior
-
-    // public Person(String firstname, String lastname, Date birthdate, char gender)
-    // {
-    // setName(firstname + " " + lastname); // remember to call method in
     // constructor
-    // setBirthday(birthdate);
-
-    // }
+    public Person(String name, char gender) {
+        setName(name);
+        setGender(gender);
+    }
 
     // setters
 
@@ -52,12 +48,12 @@ public class Person {
 
     // sets birthday
 
-    public void setBirthday(Date birthDate) {
+    public void setBirthday(int i) {
         Date today = new Date();
-        if (birthDate.compareTo(today) > 0) { // checks if birtday is newer than todays date
+        if (i.compareTo(today) > 0) { // checks if birtday is newer than todays date
             throw new IllegalArgumentException("Kan ikke ha bursdag fram i tid!");
         }
-        this.birthdate = birthDate;
+        this.birthdate = i;
     }
 
     // gets birtday
@@ -81,8 +77,8 @@ public class Person {
         if (gender != 'M' && gender != 'F' && gender != '\0') {
             throw new IllegalArgumentException("Kjønn må enten være M, F eller 0");
 
-        } 
-        
+        }
+
         this.gender = gender;
     }
 
@@ -94,13 +90,12 @@ public class Person {
 
     @Override
     public String toString() {
-        return name;
+        return "Person [name=" + name + ", gender=" + gender + "]";
     }
 
     public static void main(String[] args) {
-
-        // should throw error
-        // Person p2 = new Person("D", "H");
+        Person p1 = new Person("Christopher Hoe", 'M');
+        System.out.println(p1);
 
     }
 

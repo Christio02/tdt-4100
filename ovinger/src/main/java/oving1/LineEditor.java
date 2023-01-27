@@ -48,8 +48,8 @@ public class LineEditor {
     }
 
     public void deleteLeft() { // need to fix this
-        
-        if (insertionIndex > 0) { // 
+
+        if (insertionIndex > 0) { // only runs if the insertionindex is not at the beginnning of text
             StringBuilder s = new StringBuilder(text);
 
             s.deleteCharAt(insertionIndex - 1);
@@ -62,7 +62,8 @@ public class LineEditor {
     public void deleteRight() {
         StringBuilder s2 = new StringBuilder(text);
 
-        if (insertionIndex < s2.length()) {
+        if (insertionIndex < s2.length()) { // only deletes character to the right if the insertionindex is less than
+                                            // the length of string
             s2.deleteCharAt(insertionIndex);
             text = s2.toString();
         }
