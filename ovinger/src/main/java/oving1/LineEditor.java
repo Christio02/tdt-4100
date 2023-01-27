@@ -48,38 +48,23 @@ public class LineEditor {
     }
 
     public void deleteLeft() { // need to fix this
-        StringBuilder s = new StringBuilder(text);
-        if (insertionIndex == 0 || text.length() > 1) {
-            throw new IllegalArgumentException("Kan ikke slette tegn til venstre på index 0!");
-        }
+        
+        if (insertionIndex > 0) { // 
+            StringBuilder s = new StringBuilder(text);
 
-        if (insertionIndex > 0) {
             s.deleteCharAt(insertionIndex - 1);
+            text = s.toString();
             insertionIndex--;
-
-        } else {
-            s.deleteCharAt(--insertionIndex);
-            String newS3 = s.toString();
-            text = newS3;
-            insertionIndex = insertionIndex - 1;
         }
 
     }
 
     public void deleteRight() {
-        if (text.length() == 0) {
-            return;
-        }
-        StringBuilder s = new StringBuilder(text);
-        if (text.length() == 1 || insertionIndex == 0) {
-            s.deleteCharAt(insertionIndex);
-            String newS = s.toString();
-            text = newS;
-        } else {
-            s.deleteCharAt(insertionIndex + 1);
-            String newS2 = s.toString();
-            text = newS2;
-            insertionIndex = insertionIndex + 1;
+        StringBuilder s2 = new StringBuilder(text);
+
+        if (insertionIndex < s2.length()) {
+            s2.deleteCharAt(insertionIndex);
+            text = s2.toString();
         }
 
     }
@@ -100,8 +85,9 @@ public class LineEditor {
         LineEditor l = new LineEditor();
         l.setText("");
         l.insertString("J");
-        l.setInsertionIndex(0);
+        l.setInsertionIndex(1);
         l.deleteLeft();
+        System.out.println(l);
     }
 
 }

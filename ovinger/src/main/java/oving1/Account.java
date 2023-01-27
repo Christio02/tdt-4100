@@ -35,6 +35,13 @@ public class Account {
     }
 
     public static void main(String[] args) {
+        Account s = new Account();
+        s.deposit(200);
+        s.setInterestRate(2);
+        System.out.println(s.getInterestRate());
+        s.addInterest();
+        System.out.println(s.getBalance());
+
     }
 
 }
