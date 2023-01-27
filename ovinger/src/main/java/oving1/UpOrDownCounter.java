@@ -6,12 +6,13 @@ public class UpOrDownCounter {
     private int counter;
 
     public UpOrDownCounter(int start, int end) { // constructor
-        this.counter = start;
-        this.end = end;
-
         if (counter == end) {
             throw new IllegalArgumentException("Kan ikke ha lik start og end verdi");
         }
+        this.counter = start;
+        this.end = end;
+
+        
     }
 
     public int getCounter() {
