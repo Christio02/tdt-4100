@@ -12,48 +12,48 @@ public class Person {
 
     // constructor
     public Person() {
-
+    
     }
+
+    
 
     // setters
 
     // sets name
+    public boolean validateName(String name) {
+
+        String[] parts = name.split(" "); // creates an array of first and lastname
+
+        if (parts.length != 2) { // checks if array has exactly two elements (no middle name)
+            return false;
+        }
+
+        if (!parts[0].matches("[a-øA-Ø]+")) {
+            return false;
+        }
+
+        // check if the second element contains only alphabetical letters
+        if (!parts[1].matches("[a-øA-Ø]+")) {
+            return false;
+        }
+
+        if (parts[0].length() <= 2 || parts[1].length() <= 2) { // checks if length of the names are more or equal to
+                                                                // two
+            return false;
+        }
+
+        // if all checks pass, return true
+        return true;
+
+    }
+
+   
     public void setName(String name) {
-
-        if (!name.contains(" ")) { // Checks if name contains whitespace to determine if it has a surname or not
-
-            throw new IllegalArgumentException("Navnet har ikke etternavn!");
+        if (!validateName(name)) {
+            throw new IllegalArgumentException(
+                    "Feil format på navn!; bare bokstaver, må ha etternavn men ikke mellomnavn, eller navenene er for korte!");
         }
-
-        for (int i = 0; i < name.length(); i++) {
-            char d = name.charAt(i);
-            if (!Character.isLetter(d)) { // goes through string to look for illegal characters, name.trim() removes whitespace so that isletter does not trigger
-                throw new IllegalArgumentException("Navnet kan bare inneholde bokstaver!");
-            }
-            else if (name.trim() == "") {
-
-            }
-        }
-        
-        if (name.split(" ").length > 2) {
-            throw new IllegalArgumentException("Kan ikke ha mellomnavn!");
-        }
-        // need to split name
-        String firstname = name.split(" ")[0];
-        String lastname = name.split(" ")[1];
-
-        if (firstname.length() < 2 || lastname.length() < 2) {
-            throw new IllegalArgumentException("Fornavn og etternavn må være på minst 2 bokstaver!");
-        }
-        this.name = firstname + " " + lastname;
-
-        for (int i = 0; i < name.length(); i++) {
-            char c = name.charAt(i);
-
-            if (Character.isDigit(c)) { // goes through fullname and checks if it contains numbers
-                throw new IllegalArgumentException("Fornavn eller etternavn inneholder tall!");
-            }
-        }
+        this.name = name;
     }
 
     // gets fullname
@@ -78,14 +78,31 @@ public class Person {
 
     // sets email
     public void setEmail(String email) {
+        if (!isValidEmail(email)) {
+            throw new IllegalArgumentException("Email formatet er feil! Sjekk input, bør være på formatet: fornavn.etternavn@domene.landskode ");
+        }
+        this.email = email;
 
     }
 
+    
     // check if email is valid
-    // public boolean isValidEmail(String email) {
-         
+    public boolean isValidEmail(String email) {
 
-    // }
+        String pattern = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"; // pattern for validation of email                                              // of email
+        if (email.matches(pattern)) {
+            return true;
+
+        } else {
+            return false;
+        }
+
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
 
     // sets gender
 
@@ -104,14 +121,19 @@ public class Person {
         return this.gender;
     }
 
+
+    
+
     @Override
     public String toString() {
-        return "Person [name=" + name + ", gender=" + gender + "]";
+        return "Person [name=" + name + ", email=" + email + ", gender=" + gender + "]";
     }
 
+
+
     public static void main(String[] args) {
-        Person p1 = new Person();
-        p1.setName("Christopher Høe");
+        Person p1 = new Person("Christopher Høe", "christopher.hoee@gmail.com", 'M');
+
         System.out.println(p1);
 
     }
