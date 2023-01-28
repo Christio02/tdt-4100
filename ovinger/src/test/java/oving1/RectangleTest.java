@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class RectangleTest {
 
         /**
-         * Compares all values in a given {@link Stopwatch} to a set of expected values.
+         * Compares all values in a given {@link StopWatch} to a set of expected values.
          *
          * @param rect   The rectangle to check
          * @param minX   The expected minimum x value of rect
@@ -17,7 +17,7 @@ public class RectangleTest {
          * @param width  The expected width of rect
          * @param height The expected height of rect
          */
-        static void assertValues(Stopwatch rect, int minX, int minY, int maxX, int maxY, int width, int height,
+        static void assertValues(StopWatch rect, int minX, int minY, int maxX, int maxY, int width, int height,
                         String suffix) {
                 Assertions.assertEquals(minX, rect.getMinX(), "Wrong minX " + suffix);
                 Assertions.assertEquals(minY, rect.getMinY(), "Wrong minY " + suffix);
@@ -32,7 +32,7 @@ public class RectangleTest {
          *
          * @param rect The rectangle to check
          */
-        static void assertEmpty(Stopwatch rect) {
+        static void assertEmpty(StopWatch rect) {
                 Assertions.assertTrue(rect.isEmpty(), "Expected rectangle to be empty!");
                 Assertions.assertFalse(rect.contains(0, 0),
                                 "Empty rectangle should not contain (0, 0)! Have you checked if " +
@@ -46,15 +46,15 @@ public class RectangleTest {
         @DisplayName("Empty rectangle")
         public void testEmpty() {
                 // Test creating empty rectangle
-                Stopwatch rect1 = new Stopwatch(0, 0, 0, 0);
+                StopWatch rect1 = new StopWatch(0, 0, 0, 0);
                 assertEmpty(rect1);
 
                 // Test creating empty rectangle with only 0 height
-                Stopwatch rect2 = new Stopwatch(3, 2, 1, 2);
+                StopWatch rect2 = new StopWatch(3, 2, 1, 2);
                 assertEmpty(rect2);
 
                 // Test creating empty rectangle with only 0 width
-                Stopwatch rect3 = new Stopwatch(3, 1, 3, 2);
+                StopWatch rect3 = new StopWatch(3, 1, 3, 2);
                 assertEmpty(rect3);
         }
 
@@ -62,19 +62,19 @@ public class RectangleTest {
         @DisplayName("Rectangle constructor")
         public void testConstructor() {
                 // Simple test
-                Stopwatch rect1 = new Stopwatch(0, 0, 1, 2);
+                StopWatch rect1 = new StopWatch(0, 0, 1, 2);
                 assertValues(rect1, 0, 0, 1, 2, 1, 2, "when testing constructor");
 
                 // Test providing points in opposite order
-                Stopwatch rect2 = new Stopwatch(1, 2, 0, 0);
+                StopWatch rect2 = new StopWatch(1, 2, 0, 0);
                 assertValues(rect2, 0, 0, 1, 2, 1, 2, "when testing constructor");
 
                 // Test negative values
-                Stopwatch rect3 = new Stopwatch(3, 3, -1, 5);
+                StopWatch rect3 = new StopWatch(3, 3, -1, 5);
                 assertValues(rect3, -1, 3, 3, 5, 4, 2, "when testing constructor");
         }
 
-        private void testAdd(Stopwatch rect, int x, int y, boolean expected) {
+        private void testAdd(StopWatch rect, int x, int y, boolean expected) {
                 Assertions.assertEquals(expected, rect.add(x, y),
                                 "Wrong value returned when adding (" + x + ", " + y + ") to" +
                                                 " " + rect);
@@ -90,7 +90,7 @@ public class RectangleTest {
                 int x2 = -11, y2 = 23;
                 int x3 = 15, y3 = 33;
 
-                Stopwatch rect = new Stopwatch(x1, y1, x2, y2);
+                StopWatch rect = new StopWatch(x1, y1, x2, y2);
 
                 // Add (x3, y3) and check that rect is updated accordingly.
                 this.testAdd(rect, x3, y3, true);
@@ -116,7 +116,7 @@ public class RectangleTest {
                 int minX1X2X3 = Math.min(minX1X2, x3), minY1Y2Y3 = Math.min(minY1Y2, y3);
                 int maxX1X2X3 = Math.max(maxX1X2, x3), maxY1Y2Y3 = Math.max(maxY1Y2, y3);
 
-                Stopwatch rect = new Stopwatch(x1, y1, x2, y2);
+                StopWatch rect = new StopWatch(x1, y1, x2, y2);
 
                 // Add (x3, y3) and check that rect is updated accordingly.
                 testAdd(rect, x3, y3, true);
@@ -150,13 +150,13 @@ public class RectangleTest {
 
                 // Create a rectangle and fill it with some points. Assert that this rect is
                 // correct.
-                Stopwatch rect = new Stopwatch(x1, y1, x2, y2);
+                StopWatch rect = new StopWatch(x1, y1, x2, y2);
                 assertValues(rect, minX1X2, minY1Y2, maxX1X2, maxY1Y2, maxX1X2 - minX1X2, maxY1Y2 - minY1Y2, "when " +
                                 "creating new rectangle");
 
                 // Create another rectangle and fill it with some points. Assert that this rect
                 // is correct.
-                Stopwatch rect2 = new Stopwatch(x1, y1, x3, y3);
+                StopWatch rect2 = new StopWatch(x1, y1, x3, y3);
                 assertValues(rect2, minX1X3, minY1Y3, maxX1X3, maxY1Y3, maxX1X3 - minX1X3, maxY1Y3 - minY1Y3, "when " +
                                 "creating new rectangle");
 
@@ -178,7 +178,7 @@ public class RectangleTest {
 
                 // Create a rectangle and fill it with some points. Assert that this rect is
                 // correct.
-                Stopwatch rect = new Stopwatch(x1, y1, x2, y2);
+                StopWatch rect = new StopWatch(x1, y1, x2, y2);
                 assertValues(rect, minX1X2, minY1Y2, maxX1X2, maxY1Y2, width, height, "when creating new rectangle");
 
                 // Add rectangle to itself and check that state stays the same
@@ -203,11 +203,11 @@ public class RectangleTest {
                 int maxX3X4 = Math.max(x3, x4), maxY3Y4 = Math.max(y3, y4);
 
                 // Create two rectangles and check correctness
-                Stopwatch rect1 = new Stopwatch(x1, y1, x2, y2);
+                StopWatch rect1 = new StopWatch(x1, y1, x2, y2);
                 assertValues(rect1, minX1X2, minY1Y2, maxX1X2, maxY1Y2, maxX1X2 - minX1X2, maxY1Y2 - minY1Y2, "when " +
                                 "creating new rectangle");
 
-                Stopwatch rect2 = new Stopwatch(x3, y3, x4, y4);
+                StopWatch rect2 = new StopWatch(x3, y3, x4, y4);
                 assertValues(rect2, minX3X4, minY3Y4, maxX3X4, maxY3Y4, maxX3X4 - minX3X4, maxY3Y4 - minY3Y4, "when " +
                                 "creating new rectangle");
 
@@ -215,7 +215,7 @@ public class RectangleTest {
                 int minX = Math.min(minX1X2, minX3X4), minY = Math.min(minY1Y2, minY3Y4);
                 int maxX = Math.max(maxX1X2, maxX3X4), maxY = Math.max(maxY1Y2, maxY3Y4);
 
-                Stopwatch union1 = rect1.union(rect2);
+                StopWatch union1 = rect1.union(rect2);
                 assertValues(union1, minX, minY, maxX, maxY, maxX - minX, maxY - minY,
                                 "when calling #union with another" +
                                                 " rectangle");
@@ -230,7 +230,7 @@ public class RectangleTest {
                                 +
                                 "modify the current ones!");
 
-                Stopwatch union2 = rect2.union(rect1);
+                StopWatch union2 = rect2.union(rect1);
                 assertValues(union2, minX, minY, maxX, maxY, maxX - minX, maxY - minY,
                                 "when calling #union with another" +
                                                 " rectangle");

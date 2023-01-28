@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LineEditor",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.LineEditor",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Car",
+            "request": "launch",
+            "mainClass": "foreksempel/of1.kode.Car",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Book",
+            "request": "launch",
+            "mainClass": "foreksempel/of1.Book",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch StopWatch",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.StopWatch",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
             "name": "Launch Account",
             "request": "launch",
             "mainClass": "ovinger/oving2.Account",
@@ -153,6 +181,372 @@
         },
         {
             "type": "java",
+            "name": "Launch LineEditor",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.LineEditor",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Car",
+            "request": "launch",
+            "mainClass": "foreksempel/of1.kode.Car",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Book",
+            "request": "launch",
+            "mainClass": "foreksempel/of1.Book",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch StopWatch",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.StopWatch",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Account",
+            "request": "launch",
+            "mainClass": "ovinger/oving2.Account",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person",
+            "request": "launch",
+            "mainClass": "ovinger/oving2.Person",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Car",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.carworld.Car",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Plate",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.carworld.Plate",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.carworld.Person",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person2",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.Person2",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person1",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.Person1",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch BokHylle",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.BokHylle",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch ViseRecord",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.ViseRecord",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Bok",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.Bok",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Stopwatch",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.Stopwatch",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Itgk",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Itgk",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Dictionary",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Dictionary",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lister",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Lister",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Input",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Input",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Validate",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.input.Validate",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
+            "name": "Launch UpOrDownCounter",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.UpOrDownCounter",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Location",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.Location",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Account",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.Account",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Storage",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.scratch.Storage",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
+            "name": "Launch Year",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.scratch.Year",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
+            "name": "Launch Account",
+            "request": "launch",
+            "mainClass": "ovinger/oving2.Account",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person",
+            "request": "launch",
+            "mainClass": "ovinger/oving2.Person",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Car",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.carworld.Car",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Plate",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.carworld.Plate",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.carworld.Person",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person2",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.Person2",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person1",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.kode.Person1",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch BokHylle",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.BokHylle",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch ViseRecord",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.ViseRecord",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Bok",
+            "request": "launch",
+            "mainClass": "foreksempel/uke4.Bok",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Stopwatch",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.Stopwatch",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Itgk",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Itgk",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Dictionary",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Dictionary",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lister",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Lister",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Input",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Input",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Validate",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.input.Validate",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
+            "name": "Launch Dictionary",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Dictionary",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lister",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Lister",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Input",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Input",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Validate",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.input.Validate",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "name": "Launch UpOrDownCounter",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.UpOrDownCounter",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Digit",
+=======
+            "name": "Launch UpOrDownCounter",
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
+            "request": "launch",
+            "mainClass": "ovinger/oving1.UpOrDownCounter",
+            "projectName": "ovinger"
+<<<<<<< HEAD
+=======
+=======
+        },
+        {
+            "type": "java",
+            "name": "Launch Location",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.Location",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Account",
+            "request": "launch",
+            "mainClass": "ovinger/oving1.Account",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+            "name": "Launch Storage",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.scratch.Storage",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
+            "name": "Launch Year",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.scratch.Year",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "name": "Launch Car",
             "request": "launch",
             "mainClass": "foreksempel/uke3.Car",
@@ -164,11 +558,22 @@
             "request": "launch",
             "mainClass": "foreksempel/uke3.Person",
             "projectName": "foreksempel"
+<<<<<<< HEAD
+>>>>>>> fagstab/main
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
         },
         {
             "type": "java",
             "name": "Launch Counter",
             "request": "launch",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "mainClass": "minegenkode/practice.Counter",
+            "projectName": "minegenkode"
+=======
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "mainClass": "foreksempel/uke3.Counter",
             "projectName": "foreksempel"
         },
@@ -185,6 +590,10 @@
             "request": "launch",
             "mainClass": "foreksempel/uke3.fasit.Person",
             "projectName": "foreksempel"
+<<<<<<< HEAD
+>>>>>>> fagstab/main
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
         },
         {
             "type": "java",
@@ -194,6 +603,68 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "name": "Launch Dictionary",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Dictionary",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Funksjoner",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Funksjoner",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch If",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.If",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Input",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Input",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Itgk",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Itgk",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lister",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Lister",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Loop",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Loop",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Print",
+            "request": "launch",
+            "mainClass": "foreksempel/of0.kode.Print",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+=======
+>>>>>>> fagstab/main
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "name": "Launch Card",
             "request": "launch",
             "mainClass": "foreksempel/uke2.Card",
@@ -229,6 +700,19 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "name": "Launch Random100",
+            "request": "launch",
+            "mainClass": "foreksempel/uke2.Random100",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+=======
+>>>>>>> fagstab/main
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "name": "Launch Snitt",
             "request": "launch",
             "mainClass": "foreksempel/uke2.Snitt",
@@ -257,6 +741,11 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "name": "Launch Average2",
             "request": "launch",
             "mainClass": "foreksempel/uke2.fasit.Average2",
@@ -264,6 +753,10 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
+>>>>>>> fagstab/main
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "name": "Launch AverageCoordinator",
             "request": "launch",
             "mainClass": "foreksempel/uke2.fasit.AverageCoordinator",
@@ -306,13 +799,29 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "name": "Launch Random100(1)",
+=======
             "name": "Launch Random100",
+>>>>>>> fagstab/main
+=======
+            "name": "Launch Random100",
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "request": "launch",
             "mainClass": "foreksempel/uke2.fasit.Random100",
             "projectName": "foreksempel"
         },
         {
             "type": "java",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "name": "Launch LesFraTerminal",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.LesFraTerminal",
+=======
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "name": "Launch Random100_dashit",
             "request": "launch",
             "mainClass": "foreksempel/uke2.fasit.Random100_dashit",
@@ -331,6 +840,10 @@
             "request": "launch",
             "mainClass": "foreksempel/uke3.LesFraTerminal",
             "console": "integratedTerminal",
+<<<<<<< HEAD
+>>>>>>> fagstab/main
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "projectName": "foreksempel"
         },
         {
@@ -342,6 +855,19 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "name": "Launch Counter",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.fasit.Counter",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+=======
+>>>>>>> fagstab/main
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "name": "Launch Konstruktor",
             "request": "launch",
             "mainClass": "foreksempel/uke3.fasit.Konstruktor",
@@ -349,6 +875,26 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "name": "Launch Person(1)",
+            "request": "launch",
+            "mainClass": "foreksempel/uke3.fasit.Person",
+            "projectName": "foreksempel"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice",
+            "request": "launch",
+            "mainClass": "minegenkode/practice.Practice",
+            "projectName": "minegenkode"
+        },
+        {
+            "type": "java",
+=======
+>>>>>>> fagstab/main
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "name": "Launch HelloWorld",
             "request": "launch",
             "mainClass": "ovinger/oving0.HelloWorld",
@@ -356,6 +902,19 @@
         },
         {
             "type": "java",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "name": "Launch oving0",
+            "request": "launch",
+            "mainClass": "ovinger/oving0.oving0",
+            "projectName": "ovinger"
+        },
+        {
+            "type": "java",
+=======
+>>>>>>> fagstab/main
+=======
+>>>>>>> 42089018e8e57a9b9802c91129e6ea5df5efc17f
             "name": "Launch TodoApp",
             "request": "launch",
             "mainClass": "todolist/todolist.fxui.TodoApp",

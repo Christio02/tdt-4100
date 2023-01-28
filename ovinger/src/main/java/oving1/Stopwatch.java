@@ -1,23 +1,32 @@
 package oving1;
 
-import java.util.Scanner;
-
-public class Stopwatch {
+public class StopWatch {
     // states
     private boolean running = false; // default state, before we start the stopwatch
     private int ticks; // state for holding each tick state
-    private int ticksStarted; // calculating ticks since started
+    private int laptime;
     private int lap;
+    private int starttime;
+
+    public StopWatch() {
+
+    }
 
     public void tick(int tick) { // increments tick
-        this.ticks = +tick;
+        this.ticks += tick;
+        this.lap += ticks;
+    }
+
+    public void startLap() {
+        this.laptime = this.ticks;
+        this.lap = 0;
     }
 
     public void start() { // sets running to true
         this.running = true;
     }
 
-    public void stop() { // sets runnin to false
+    public void stop() { // sets running to false
         this.running = false;
     }
 
@@ -31,25 +40,24 @@ public class Stopwatch {
     }
 
     public int getTicks() {
-        return ticks; // returns total ticks since life of clock
+        return this.ticks; // returns total ticks since life of clock
+    }
+
+    public int getLapTime() {
+        return this.lap;
+    }
+
+    public int getLastLapTime() {
+        return this.ticks - this.laptime;
     }
 
     public int getTime() {
         if (!isStarted()) {
             return -1;
-        } else if (isStarted() && !isStopped()) {
-            return ticks;
 
         } else {
             return ticks;
         }
-
-    }
-
-    public static void main(String[] args) {
-
-        System.out.println("Write something to start the stopwatch: ");
-
     }
 
 }
