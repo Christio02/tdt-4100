@@ -99,8 +99,8 @@ public class Person {
 
         // need to split firstname and lastname from email and validate upon name
 
-        String[] emailParts = email.split(Pattern.quote(".") + "|" + Pattern.quote("@")); // splits email on periods andat-sign
-                                                                                          
+        String[] emailParts = email.split(Pattern.quote(".") + "|" + Pattern.quote("@")); // splits email on periods
+                                                                                          // andat-sign
 
         if (!emailParts[0].equalsIgnoreCase(parts[0])) {
             return false;
