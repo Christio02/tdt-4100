@@ -85,8 +85,8 @@ public class LineEditor {
     public static void main(String[] args) {
         LineEditor l = new LineEditor();
         l.setText("");
-        l.insertString("J");
-        l.setInsertionIndex(1);
+        l.insertString("Java");
+        l.setInsertionIndex(0);
         l.deleteLeft();
         System.out.println(l);
     }

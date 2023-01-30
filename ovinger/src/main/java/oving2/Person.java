@@ -1,6 +1,8 @@
 package oving2;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.regex.Pattern;
 
 public class Person {
     // states
@@ -18,42 +20,38 @@ public class Person {
     // setters
 
     // sets name
+    public boolean validateName(String name) {
+
+        String[] parts = name.split(" "); // creates an array of first and lastname
+
+        if (parts.length != 2) { // checks if array has exactly two elements (no middle name)
+            return false;
+        }
+        // check if the firstname and lastname have valid letters
+        if (!parts[0].matches("[a-øA-Ø]+")) {
+            return false;
+        }
+
+        if (!parts[1].matches("[a-øA-Ø]+")) {
+            return false;
+        }
+
+        if (parts[0].length() <= 2 || parts[1].length() <= 2) { // checks if length of the names are more or equal to 2
+
+            return false;
+        }
+
+        // if all checks pass, return true
+        return true;
+
+    }
+
     public void setName(String name) {
-
-        if (!name.contains(" ")) { // Checks if name contains whitespace to determine if it has a surname or not
-
-            throw new IllegalArgumentException("Navnet har ikke etternavn!");
+        if (!validateName(name)) {
+            throw new IllegalArgumentException(
+                    "Feil format på navn!; bare bokstaver, må ha etternavn men ikke mellomnavn, eller navenene er for korte!");
         }
-
-        for (int i = 0; i < name.length(); i++) {
-            char d = name.charAt(i);
-            if (!Character.isLetter(d)) { // goes through string to look for illegal characters, name.trim() removes whitespace so that isletter does not trigger
-                throw new IllegalArgumentException("Navnet kan bare inneholde bokstaver!");
-            }
-            else if (name.trim() == "") {
-
-            }
-        }
-        
-        if (name.split(" ").length > 2) {
-            throw new IllegalArgumentException("Kan ikke ha mellomnavn!");
-        }
-        // need to split name
-        String firstname = name.split(" ")[0];
-        String lastname = name.split(" ")[1];
-
-        if (firstname.length() < 2 || lastname.length() < 2) {
-            throw new IllegalArgumentException("Fornavn og etternavn må være på minst 2 bokstaver!");
-        }
-        this.name = firstname + " " + lastname;
-
-        for (int i = 0; i < name.length(); i++) {
-            char c = name.charAt(i);
-
-            if (Character.isDigit(c)) { // goes through fullname and checks if it contains numbers
-                throw new IllegalArgumentException("Fornavn eller etternavn inneholder tall!");
-            }
-        }
+        this.name = name;
     }
 
     // gets fullname
@@ -78,14 +76,70 @@ public class Person {
 
     // sets email
     public void setEmail(String email) {
+        if (!isValidEmail(email, name)) {
+            throw new IllegalArgumentException(
+                    "Email formatet er feil! Sjekk input, bør være på formatet: fornavn.etternavn@domene.landskode ");
+        }
+        this.email = email;
 
     }
 
     // check if email is valid
-    // public boolean isValidEmail(String email) {
-         
+    public boolean isValidEmail(String email, String name) {
 
-    // }
+        String[] parts = name.split(" ");
+
+        String pattern = "^[a-øA-Ø0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+        ; // pattern for validation
+
+        if (!email.matches(pattern)) { // checks if email has correct format
+            return false;
+
+        }
+
+        // need to split firstname and lastname from email and validate upon name
+
+        String[] emailParts = email.split(Pattern.quote(".") + "|" + Pattern.quote("@")); // splits email on periods
+                                                                                          // andat-sign
+
+        if (!emailParts[0].equalsIgnoreCase(parts[0])) {
+            return false;
+        }
+
+        if (!emailParts[1].equalsIgnoreCase(parts[1])) {
+            return false;
+        }
+
+        String[] cTLDs = { "ad", "ae", "af", "ag", "ai", "al", "am", "ao", "aq", "ar", "as", "at", "au", "aw", "ax",
+                "az", "ba", "bb", "bd", "be", "bf", "bg", "bh", "bi", "bj", "bl", "bm", "bn", "bo", "bq", "br", "bs",
+                "bt", "bv", "bw", "by", "bz", "ca", "cc", "cd", "cf", "cg", "ch", "ci", "ck", "cl", "cm", "cn", "co",
+                "cr", "cu", "cv", "cw", "cx", "cy", "cz", "de", "dj", "dk", "dm", "do", "dz", "ec", "ee", "eg", "eh",
+                "er", "es", "et", "fi", "fj", "fk", "fm", "fo", "fr", "ga", "gb", "gd", "ge", "gf", "gg", "gh", "gi",
+                "gl", "gm", "gn", "gp", "gq", "gr", "gs", "gt", "gu", "gw", "gy", "hk", "hm", "hn", "hr", "ht", "hu",
+                "id", "ie", "il", "im", "in", "io", "iq", "ir", "is", "it", "je", "jm", "jo", "jp", "ke", "kg", "kh",
+                "ki", "km", "kn", "kp", "kr", "kw", "ky", "kz", "la", "lb", "lc", "li", "lk", "lr", "ls", "lt", "lu",
+                "lv", "ly", "ma", "mc", "md", "me", "mf", "mg", "mh", "mk", "ml", "mm", "mn", "mo", "mp", "mq", "mr",
+                "ms", "mt", "mu", "mv", "mw", "mx", "my", "mz", "na", "nc", "ne", "nf", "ng", "ni", "nl", "no", "np",
+                "nr", "nu", "nz", "om", "pa", "pe", "pf", "pg", "ph", "pk", "pl", "pm", "pn", "pr", "ps", "pt", "pw",
+                "py", "qa", "re", "ro", "rs", "ru", "rw", "sa", "sb", "sc", "sd", "se", "sg", "sh", "si", "sj", "sk",
+                "sl", "sm", "sn", "so", "sr", "ss", "st", "sv", "sx", "sy", "sz", "tc", "td", "tf", "tg", "th", "tj",
+                "tk", "tl", "tm", "tn", "to", "tr", "tt", "tv", "tw", "tz", "ua", "ug", "um", "us", "uy", "uz", "va",
+                "vc", "ve", "vg", "vi", "vn", "vu", "wf", "ws", "ye", "yt", "za", "zm", "zw" };
+
+        for (String cTLD : cTLDs) {
+            // converts ctlds array to list, .contains checks if emailParts (domain of
+            // email) is in the array
+            if (!Arrays.asList(cTLDs).contains(emailParts[emailParts.length - 1].toLowerCase())) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
 
     // sets gender
 
@@ -106,12 +160,14 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person [name=" + name + ", gender=" + gender + "]";
+        return "Person [name=" + name + ", email=" + email + ", gender=" + gender + "]";
     }
 
     public static void main(String[] args) {
         Person p1 = new Person();
-        p1.setName("Christopher Høe");
+        p1.setName("Christopher Hoee");
+        p1.setEmail("christopher.hoee@gmail.com");
+        p1.setGender('M');
         System.out.println(p1);
 
     }
