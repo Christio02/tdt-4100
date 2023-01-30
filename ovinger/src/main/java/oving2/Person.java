@@ -99,8 +99,8 @@ public class Person {
 
         // need to split firstname and lastname from email and validate upon name
 
-        String[] emailParts = email.split(Pattern.quote(".") + "|" + Pattern.quote("@")); // splits email on periods and at-sign
-                                                                                        
+        String[] emailParts = email.split(Pattern.quote(".") + "|" + Pattern.quote("@")); // splits email on periods and
+                                                                                          // at-sign
 
         if (!emailParts[0].equalsIgnoreCase(parts[0])) {
             return false;
@@ -127,7 +127,9 @@ public class Person {
                 "vc", "ve", "vg", "vi", "vn", "vu", "wf", "ws", "ye", "yt", "za", "zm", "zw" };
 
         for (String cTLD : cTLDs) {
-            // converts ctlds array to list, .contains checks if emailParts (domain of email) is in the array
+            // converts ctlds array to list, .contains checks if emailParts (domain of
+            // email) is in the array
+
             if (!Arrays.asList(cTLDs).contains(emailParts[emailParts.length - 1].toLowerCase())) {
                 return false;
             }
