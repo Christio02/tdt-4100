@@ -1,5 +1,6 @@
 {
   "java.configuration.updateBuildConfiguration": "automatic",
   "java.debug.settings.forceBuildBeforeLaunch": false,
-  "java.debug.settings.console": "internalConsole"
+  "java.debug.settings.console": "internalConsole",
+  "FSharp.suggestGitignore": false
 }
