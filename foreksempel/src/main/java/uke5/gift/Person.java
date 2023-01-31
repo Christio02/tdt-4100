@@ -31,8 +31,12 @@ public class Person {
         // }
         // System.out.println("Satt "+this.getName()+" sin make til "+spouse.getName());
         // spouse.setSpouse(this);
+
+        if(!spouse.isMarriedTo(this)) {
+            spouse.setSpouse(this);
+        }
     }
-    
+    4
     public boolean isMarriedTo(Person person) {
         if (this.spouse == null) return false;
         return this.spouse.equals(person);

@@ -89,8 +89,7 @@ public class Person {
 
         String[] parts = name.split(" ");
 
-        String pattern = "^[a-øA-Ø0-9_!#$%&`*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
-        ; // pattern for validation
+        String pattern = "^[a-øA-Ø0-9_!#$%&`*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"; // pattern for validation
 
         if (!email.matches(pattern)) { // checks if email has correct format
             return false;

@@ -1,8 +1,35 @@
 package uke5.kino3;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class Kino {
 
+	private Collection<Sal> saler;
+
+	public Kino() {
+		saler = new ArrayList<>() {
+			
+		};
+	}
+
+
+	public void addSal(Sal sal) {
+		saler.add(sal);
+	}
+
+	
+	
+	@Override
+	public String toString() {
+		return "Kino [saler=" + saler + "]";
+	}
+
+
 	public static void main(String[] args) {
+
+		Kino ullensaker = new Kino();
+
 		Film alexander = new Film("Alexander", 15, "USA");
 		Film badsanta = new Film("Bad Santa", 11, "USA");
 		Sal nova3 = new Sal("Nova 3", 200);
@@ -19,6 +46,12 @@ public class Kino {
 		System.out.println(fv2);
 		System.out.println(fv3);
 //		System.out.println(fv4);
+
+		ullensaker.addSal(nova3);
+		ullensaker.addSal(prinsen4);
+		ullensaker.addSal(prinsen7);
+
+		System.out.println(ullensaker);
 
 	}
 
