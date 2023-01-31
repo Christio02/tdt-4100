@@ -1,3 +1,4 @@
+
 // En package er en måte å definere et sett med klasser som hører sammen.
 // Tenk gjerne at de ligger i samme folder.
 // https://www.w3schools.com/java/java_packages.asp
