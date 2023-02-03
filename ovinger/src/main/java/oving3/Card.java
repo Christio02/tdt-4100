@@ -1,7 +1,5 @@
 package oving3;
 
-import java.util.Arrays;
-import java.util.List;
 
 public class Card {
 
@@ -13,20 +11,23 @@ public class Card {
     public Card(char color, int value) {
 
         if (validateCard(color, value)) {
+            this.value = value;
+            this.color = color;
+        
+        } else {
             throw new IllegalArgumentException("Illegal value or color!");
         }
-        this.value = value;
-        this.color = color;
+        
 
     }
 
-    private boolean validateCard(char color, int value) {
+    public boolean validateCard(char color, int value) {
 
         if (value < 1 || value > 13) {
             return false;
         }
 
-        if (color != 'S' || color != 'H' || color != 'D' || color != 'C') {
+        if (color != 'S' && color != 'H' && color != 'D' && color != 'C') {
             return false;
         }
 
@@ -48,7 +49,6 @@ public class Card {
 
     public static void main(String[] args) {
 
-        Card c1 = new Card('S', 2);
-        System.out.println(c1);
+
     }
 }
