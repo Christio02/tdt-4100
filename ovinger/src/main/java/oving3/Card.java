@@ -5,51 +5,50 @@ import java.util.List;
 
 public class Card {
 
-    // char color;
-    // private int[] values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
-
-    // private char[] colors = {'S', 'H', 'D', 'C'}; // char array
-
     private int value;
     private char color;
 
     // constructor for card color and value
 
     public Card(char color, int value) {
+
+        if (validateCard(color, value)) {
+            throw new IllegalArgumentException("Illegal value or color!");
+        }
         this.value = value;
         this.color = color;
 
     }
 
     private boolean validateCard(char color, int value) {
-        List<char[]> chars = Arrays.asList(colors);
-        if (!chars.contains(color)) {
+
+        if (value < 1 || value > 13) {
             return false;
         }
 
-        List<int[]> vals = Arrays.asList(values);
-        if (!vals.contains(value)) {
+        if (color != 'S' || color != 'H' || color != 'D' || color != 'C') {
             return false;
-
         }
 
         return true;
-
     }
 
     public char getSuit() {
         return this.color;
     }
 
+    public int getFace() {
+        return this.value;
+    }
+
     @Override
     public String toString() {
-        return "Card [value=" + value + ", color=" + color + "]";
+        return color + "" + value;
     }
 
     public static void main(String[] args) {
 
-        Card c1 = new Card('G', 2);
+        Card c1 = new Card('S', 2);
         System.out.println(c1);
-        System.out.println(c1.getSuit());
     }
 }
