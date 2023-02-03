@@ -60,7 +60,7 @@ public class Nim {
     // checks if move is valid
     public boolean isValidMove(int number, int targetPile) {
         if (isGameOver()) {
-            throw new IllegalStateException();
+            return false;
         }
 
         if (number < 1) {
