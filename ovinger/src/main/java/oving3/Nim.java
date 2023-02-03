@@ -39,7 +39,7 @@ public class Nim {
     // method for removing pieces from a pile
     public void removePieces(int number, int targetPile) {
         if (isGameOver()) {
-            throw new IllegalStateException();
+            throw new IllegalStateException("Game is finishes, can't remove more pieces!");
         }
 
         if (!isValidMove(number, targetPile)) {
@@ -81,12 +81,12 @@ public class Nim {
 
     public boolean isGameOver() {
         // should return true if one of the piles have 0 pieces
-        // if (nim.contains(0)) {
-        // return true;
-        // }
+        if (!nim.contains(0)) {
+            return false;
+        }
 
-        // return false;
-        return nim.contains(0);
+        return true;
+
     }
 
     // returns amount of pieces in pile
