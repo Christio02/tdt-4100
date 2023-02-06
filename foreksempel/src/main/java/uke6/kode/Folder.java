@@ -3,8 +3,7 @@ package uke6.kode;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import javafx.beans.binding.BooleanExpression;
-import uke6.fasit.File;
+
 
 public class Folder {
     String name;
@@ -30,7 +29,7 @@ public class Folder {
     }
 
     public Folder getParent() {
-        return parent;
+        return   parent;
     }
 
     public String getName() {
@@ -49,16 +48,20 @@ public class Folder {
 
     public void printTree() {
         System.out.println(this);
+        for (File file : files) {
+            System.out.println(file);
+            
+        }
         for (Folder folder : folders) { // for each loop that uses recursion to travel the tree
             folder.printTree();
         }
     }
 
     private boolean contains(Folder destination) { // går gjennom hver av undermappene og sjekker om folderen befinner seg i den
-        if (this.equals(destination)) {
+        if (this.equals(destination)) { // er jeg destination?
             return true;
         }
-        for (Folder folder : folders) {
+        for (Folder folder : folders) { // er undermappene destionation?
             if (folder.contains(destination)) {
                 return true;
             }
@@ -66,9 +69,12 @@ public class Folder {
 
         return false;
     }
-
-
-
+    private boolean contains2(Folder destination) { // sjekker om parent oppover i hierarkiet er destination, rekursivt
+        if (destination == null) return false;
+        if (this == destination) return true;
+        return this.contains2(destination.getParent()); // sjekker om parenten til cdiv er destination
+        
+    }
 
     public void move(Folder destination) { // flytter folder til en ny parent folder
         if (this.contains(destination)) {
@@ -81,6 +87,40 @@ public class Folder {
 
     private Collection<Folder> getFolders() {
         return this.folders;
+    }
+
+    public void addFile(File file) {
+        this.files.add(file);
+    }
+
+    public void removeFile(File file) {
+        this.files.remove(file);
+    }
+
+
+    public Object findFirst(String pattern) { // skal returnere enten file eller folder, finner første treff på pattern, e.g. "a.txt"
+        for (File file : files) {
+
+            if (file.getName().equals(pattern)) {
+                return file;
+            }
+
+        }
+        for (Folder folder : folders) {
+            
+            if (folder.getName().equals(pattern)) {
+                return folder;
+            }
+        }
+
+        for (Folder folder : folders) {
+            Object found = folder.findFirst(pattern); // lager objekt av type objekt
+            if (found != null) {
+                return found;
+            }
+        }
+        return null;
+
     }
 
     public static void main(String[] args) {
@@ -98,18 +138,21 @@ public class Folder {
         // home.printTree(); 
         // andreas.printTree();
 
-        cdiv.move(bdiv);
+        // cdiv.move(bdiv);
         // System.out.println(cdiv);
-        System.out.println("Før flytting av borgeh");
+        // System.out.println("Før flytting av borgeh");
         // home.printTree();
 
-        borgeh.move(cdiv);
-        System.out.println("Etter flytting av borgeh");
+        // borgeh.move(cdiv);
+        // System.out.println("Etter flytting av borgeh");
         // home.printTree();
 
-        borgeh.printTree();
+        cdiv.move(borgeh);
+
         
     }
+
+    
 
 
 
