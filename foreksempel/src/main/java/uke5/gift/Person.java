@@ -36,7 +36,7 @@ public class Person {
             spouse.setSpouse(this);
         }
     }
-    4
+    
     public boolean isMarriedTo(Person person) {
         if (this.spouse == null) return false;
         return this.spouse.equals(person);

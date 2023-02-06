@@ -1,8 +1,6 @@
 package oving3;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.stream.IntStream;
 
 public class CardDeck {
 
