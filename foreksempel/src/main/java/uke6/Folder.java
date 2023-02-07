@@ -131,18 +131,19 @@ public class Folder {
         // home.printTree();
         // borgeh.printTree();
 
-        // for (int i = 0; i < 30; i++) {
-        //     Folder tmp = new Folder("folder"+i, home);
-        // }
-        // for (Folder folder : home.getFolders()) {
-        //     for (int i = 0; i < 30; i++) {
-        //         Folder tmp = new Folder("folder"+i, folder);
-        //     }    
-        // }
-        // System.out.println(home.contains(cdiv));
-        // // System.out.println(home.contains2(cdiv));
+        for (int i = 0; i < 10; i++) {
+            Folder tmp2 = new Folder("afolder"+i, home);
+        }
+        for (Folder folder : home.getFolders()) {
+            for (int i = 0; i < 10; i++) {
+                Folder tmp = new Folder("folder"+i, folder);
+            }    
+        }
+        System.out.println(home.contains(cdiv));
+        // System.out.println(home.contains2(cdiv));
         // cdiv.move(borgeh);
 
+        // home.printTree();
     }
 
 
