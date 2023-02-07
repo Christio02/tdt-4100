@@ -1,4 +1,4 @@
-package oving4;
+package oving4.partner;
 
 public class PartnerMain {
 
