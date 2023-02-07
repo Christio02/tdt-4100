@@ -5,10 +5,8 @@ public class Partner2 {
     private String name;
     private Partner partner1;
 
-    public Partner2(String name, Partner partner1) {
+    public Partner2(String name, Partner partner2) {
         this.name = name;
-
-        this.partner1 = partner1;
     
     }
 
@@ -17,12 +15,15 @@ public class Partner2 {
     }
 
     public Partner getPartner1() {
-        return this.getPartner1();
+        if (this.partner1 == null) {
+            return null;
+        }
+        return this.partner1.getPartner2();
     }
 
-    public void setPartner(Partner partner) {
+    public void setPartner(Partner2 partner) {
         if (this.partner1 == null) {
-            this.partner1.setPartner2(this);
+
         }
 
         

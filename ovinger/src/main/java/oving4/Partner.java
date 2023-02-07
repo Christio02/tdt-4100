@@ -7,9 +7,8 @@ public class Partner {
 
     // contstructor
 
-    public Partner(String name, Partner2 partner2) {
+    public Partner(String name, Partner partner) {
         this.name = name;
-        this.partner2 = partner2;
 
     }
 
@@ -21,9 +20,9 @@ public class Partner {
         return partner2.getPartner1();
     }
 
-    public void setPartner2(Partner2 partner2) {
+    public void setPartner2(Partner partner2) {
         if (this.partner2 == null) {
-            this.partner2.setPartner(getPartner2());
+
         }
 
         return;
