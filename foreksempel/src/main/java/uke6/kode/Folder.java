@@ -69,6 +69,7 @@ public class Folder {
 
         return false;
     }
+    
     private boolean contains2(Folder destination) { // sjekker om parent oppover i hierarkiet er destination, rekursivt
         if (destination == null) return false;
         if (this == destination) return true;
