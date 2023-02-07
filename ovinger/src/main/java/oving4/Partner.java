@@ -3,47 +3,36 @@ package oving4;
 public class Partner {
 
     private String name;
-    private Partner partner;
+    private Partner2 partner2;
 
     // contstructor
-    public Partner(String name, Partner partner) {
+
+    public Partner(String name, Partner2 partner2) {
         this.name = name;
-        if (partner != null) {
-            setPartner(partner);
-            partner.setPartner(this);
-        }
-            
+        this.partner2 = partner2;
+
     }
 
-    public String getName() {
+    public String getName1() {
         return this.name;
     }
 
-    public Partner getPartner() {
-        return this.partner;
+    public Partner getPartner2() {
+        return partner2.getPartner1();
     }
 
-    public void setPartner(Partner partner) {
-        if (this.partner != partner) {
-            this.partner = partner;
-            partner.setPartner(this);
+    public void setPartner2(Partner2 partner2) {
+        if (this.partner2 == null) {
+            this.partner2.setPartner(getPartner2());
         }
-            
+
+        return;
 
     }
 
     @Override
     public String toString() {
-        return "Partner [name=" + name + ", partner=" + partner + "]";
-    }
-
-    public static void main(String[] args) {
-        Partner p1 = new Partner("Chris", null);
-        Partner p2 = new Partner("Frida", p1);
-        p1.setPartner(p2);
-
-        System.out.println(p1);
-
+        return "Partner1 [name=" + name + ", partner2=" + partner2 + "]";
     }
 
 }
