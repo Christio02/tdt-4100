@@ -20,7 +20,7 @@ public class Person {
     // setters
 
     // sets name
-    public boolean validateName(String name) {
+    private boolean validateName(String name) {
 
         String[] parts = name.split(" "); // creates an array of first and lastname
 
@@ -85,7 +85,7 @@ public class Person {
     }
 
     // check if email is valid
-    public boolean isValidEmail(String email, String name) {
+    private boolean isValidEmail(String email, String name) {
 
         String[] parts = name.split(" ");
 
@@ -98,9 +98,9 @@ public class Person {
 
         // need to split firstname and lastname from email and validate upon name
 
-        String[] emailParts = email.split(Pattern.quote(".") + "|" + Pattern.quote("@")); // splits email on periods and
-                                                                                          // at-sign
+        String[] emailParts = email.split(Pattern.quote(".") + "|" + Pattern.quote("@")); // splits email on periods and   // at-sign
 
+                                                                                        
         if (!emailParts[0].equalsIgnoreCase(parts[0])) {
             return false;
         }
@@ -125,14 +125,10 @@ public class Person {
                 "tk", "tl", "tm", "tn", "to", "tr", "tt", "tv", "tw", "tz", "ua", "ug", "um", "us", "uy", "uz", "va",
                 "vc", "ve", "vg", "vi", "vn", "vu", "wf", "ws", "ye", "yt", "za", "zm", "zw" };
 
-        for (String cTLD : cTLDs) {
-            // converts ctlds array to list, .contains checks if emailParts (domain of
-            // email) is in the array
-
-            if (!Arrays.asList(cTLDs).contains(emailParts[emailParts.length - 1].toLowerCase())) {
+            if (!(Arrays.asList(cTLDs).contains(emailParts[3]))) {
                 return false;
-            }
-        }
+            }  
+        
 
         return true;
     }

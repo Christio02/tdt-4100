@@ -21,7 +21,7 @@ public class Card {
 
     }
 
-    public boolean validateCard(char color, int value) {
+    private boolean validateCard(char color, int value) {
 
         if (value < 1 || value > 13) {
             return false;
