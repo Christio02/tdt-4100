@@ -1,4 +1,4 @@
-package oving4.merchant;
+package oving4;
 
 
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package oving4.merchant;
+package oving4;
 
 import java.util.ArrayList;
 
@@ -21,6 +21,9 @@ public class Merchant {
 
     // method that should obtain a specific Item object
 
+    public double getBalance() {
+        return this.money;
+    }
 
     public ArrayList<Item> getInventory() {
         return this.inventory;
@@ -84,9 +87,10 @@ public class Merchant {
 
     public void itemSale(double amount, Item item) {
         
-        if ( amount < 0 || amount > 1) {
+        if (amount < 0 || amount > 1) {
             throw new IllegalArgumentException("Sale must be between 0 and 1!");
         }
+
         if (!this.inventory.contains(item)) {
             throw new IllegalArgumentException("Can't start sale on item the seller does not own!");
         }
