@@ -2,7 +2,7 @@ package oving4.objecstructures;
 
 import java.util.List;
 
-public class Card implements List<Card> {
+public class Card {
     private int value;
     private char color;
 

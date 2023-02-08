@@ -13,6 +13,7 @@ public class Main {
        m1.obtainItem(wp);
        m1.obtainItem(boots);
        m2.obtainItem(poison);
+
        
        System.out.println(m1);
        m1.itemSale(0.5, wp);

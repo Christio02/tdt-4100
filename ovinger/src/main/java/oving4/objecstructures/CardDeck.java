@@ -76,22 +76,22 @@ public class CardDeck {
 
     // move cards from cardDeck object to cardHand class (object)
 
-    public void deal(CardHand , int n) {
-        // code goes here, should call a remove card method and add it
-        // to the cardHand object
-
-        
-
-        for (int i = cardDeck.size() - 1; i > 0; i--) {
-
-        }
-        
-
-    }
+//    public void deal(CardHand, int n) {
+//        // code goes here, should call a remove card method and add it
+//        // to the cardHand object
+//
+//
+//
+//        for (int i = cardDeck.size() - 1; i > 0; i--) {
+//
+//        }
+//
+//
+//    }
 
     @Override
     public String toString() {
-        return "CardDeck [cardDeck=" + cardDeck + ", CardHand=" + CardHand + "]";
+        return "CardDeck [cardDeck=" + cardDeck + ", CardHand="  + "]";
     }
 
     public static void main(String[] args) {
