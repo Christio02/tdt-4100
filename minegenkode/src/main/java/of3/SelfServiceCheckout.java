@@ -58,8 +58,8 @@ public class SelfServiceCheckout {
 
     public void scanItem(Item item) {
         this.shoppingcart.add(item);
-        System.out.println(String.format("%-20s %.2f kr", item.getName(), item.getPrice())); // strengen skal være 20
-                                                                                             // tegn langt, setter inn
+        System.out.println(String.format("%-20s %.2f kr", item.getName(), item.getPrice())); // strengen skal være 20  // tegn langt, setter inn
+                                                                                            
         // mellomrom om det er ledig plass, // float, vill ha 2 siffer etter komma
     }
 
@@ -79,6 +79,10 @@ public class SelfServiceCheckout {
         }
         this.shoppingcart.remove(index);
     }
+
+
+
+
 
     public boolean isMember() {
         return this.phoneNumber != null;
@@ -141,9 +145,8 @@ public class SelfServiceCheckout {
         Item item2 = new Item("Fanta", 19.0, "brus", "AFCDEF");
         Item item3 = new Item("Pepsi", 20.0, "brus", "ABGDEF");
         checkout.scanItems(Arrays.asList(item1, item2, item3));
-        checkout.enableAdminMode("FigmaBal1");
-        System.out.println(checkout.shoppingcart);
-        checkout.removeFromCart(1);
-        System.out.println(checkout.shoppingcart);
+
+        System.out.println(checkout.isMember());
+       
     }
 }
