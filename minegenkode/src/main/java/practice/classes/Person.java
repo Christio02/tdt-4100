@@ -1,4 +1,4 @@
-package practice;
+package practice.classes;
 
 public class Person {
     private String navn; // holder rede på tilstanden til objektet person
