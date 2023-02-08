@@ -15,6 +15,14 @@ public class Merchant {
         this.money = money;
     }
 
+    public ArrayList<Item> getInventory() {
+        return this.inventory;
+    }
+
+    public double getMoney() {
+        return this.money;
+    }
+
     public void obtainItem(Item item) {
         this.inventory.add(item);
 
@@ -26,10 +34,17 @@ public class Merchant {
 
     public void sellItem(Item item, Merchant merchant) {
         item.changeOwner(merchant);
-        merchant
-
-
 
     }
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " inventory='" + getInventory() + "'" +
+            ", money='" + getMoney() + "'" +
+            "}";
+    }
+
 
 }

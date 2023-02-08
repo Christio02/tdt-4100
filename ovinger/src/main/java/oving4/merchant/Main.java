@@ -6,9 +6,9 @@ public class Main {
        Merchant m1 = new Merchant(100);
        Merchant m2 = new Merchant(200);
 
-       Item wp = new Item("Knife","Weapon", 20);
+       Item wp = new Item("Knife", "Weapon", 20);
 
-       System.out.println(m1);
+       System.out.println(wp);
 
 
 

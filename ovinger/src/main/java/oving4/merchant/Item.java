@@ -1,6 +1,8 @@
 package oving4.merchant;
 
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Item {
 
@@ -9,23 +11,29 @@ public class Item {
     private double price;
     private Merchant merchant;
 
+    public static final List<String> validType = Arrays.asList("Weapon", "Armour", "Potion", "Valuable"); // An immutable list global
+
     public Item(String name, String type, double price) {
         if (!validateItem(name, type, price)) {
             throw new IllegalArgumentException("Name cannot be empty, or type is illegal, price cannot be 0");
         }
+
+        this.name = name;
+        this.type = type;
+        setPrice(price);
 
         
     }
 
     private boolean validateItem(String name, String type, double price) {
         // validate name, cannot be empty:
-        if (name == "") {
+        if (name.isEmpty()) {
             return false;
         }
 
-        if (type != "Weapon" && type != "Armour" && type != "Potion" || type != "Valueable") {
+        if (!validType.contains(type)) {
             return false;
-        }
+        } 
 
         if (price < 0) {
             return false;
@@ -60,5 +68,5 @@ public class Item {
     }
 
     
-    
+   
 }
