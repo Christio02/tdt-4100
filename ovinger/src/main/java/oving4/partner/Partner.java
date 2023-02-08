@@ -1,5 +1,7 @@
 package oving4.partner;
 
+import java.util.Objects;
+
 public class Partner {
 
     private String name;
@@ -8,7 +10,8 @@ public class Partner {
     // contstructor
 
     public Partner(String name, Partner partner) {
-        this.name = name;
+        this.name = Objects.requireNonNull(name);
+        this.partner2 = Objects.requireNonNull(partner2);
 
     }
 
