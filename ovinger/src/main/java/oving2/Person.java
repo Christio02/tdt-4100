@@ -87,6 +87,7 @@ public class Person {
     // check if email is valid
     private boolean isValidEmail(String email, String name) {
 
+        String[] parts = name.split(" ");
 
         String pattern = "^[a-øA-Ø0-9_!#$%&`*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"; // pattern for validation
 
@@ -159,14 +160,13 @@ public class Person {
     }
 
     public static void main(String[] args) {
-<<<<<<< HEAD
-=======
+
         Person p1 = new Person();
         p1.setName("Christopher Hoee");
-        p1.setEmail("christopher.hoee@gmail.com");
+        p1.setEmail("christopher.hoee@gmail.no");
         p1.setGender('M');
         System.out.println(p1);
->>>>>>> f70f3455db745c68a656ba6a741398b041b42454
+
 
     }
 
