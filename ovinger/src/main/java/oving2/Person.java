@@ -89,7 +89,7 @@ public class Person {
     // check if email is valid
     public boolean isValidEmail(String email) {
 
-        String pattern = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"; // pattern for validation of email                                              // of email
+        String pattern = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"; // pattern for validation of email // of email
         if (email.matches(pattern)) {
             return true;
 
@@ -132,9 +132,6 @@ public class Person {
 
 
     public static void main(String[] args) {
-        Person p1 = new Person("Christopher Høe", "christopher.hoee@gmail.com", 'M');
-
-        System.out.println(p1);
 
     }
 
