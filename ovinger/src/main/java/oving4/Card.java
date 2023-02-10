@@ -1,8 +1,8 @@
-package oving4.objecstructures;
+package oving4;
 
-import java.util.List;
 
-public class Card implements List<Card> {
+
+public class Card {
     private int value;
     private char color;
 

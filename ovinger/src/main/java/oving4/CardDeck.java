@@ -1,7 +1,9 @@
-package oving4.objecstructures;
+package oving4;
 
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 public class CardDeck {
 
@@ -76,28 +78,32 @@ public class CardDeck {
 
     // move cards from cardDeck object to cardHand class (object)
 
-    public void deal(CardHand , int n) {
+    public void deal(CardHand hand, int n) {
         // code goes here, should call a remove card method and add it
         // to the cardHand object
 
-        
-
-        for (int i = cardDeck.size() - 1; i > 0; i--) {
-
+        List<Card> temp = new ArrayList<>();
+        for (int i =0; i < cardDeck.size(); i++) {
+            Card card = cardDeck.remove(cardDeck.size() -1);
+            hand.addCard(card);
         }
-        
 
     }
 
     @Override
     public String toString() {
-        return "CardDeck [cardDeck=" + cardDeck + ", CardHand=" + CardHand + "]";
+        return "CardDeck [cardDeck=" + cardDeck + "]";
     }
 
     public static void main(String[] args) {
         CardDeck c1 = new CardDeck(3);
-
+        System.out.println(c1);
         CardHand c2 = new CardHand();
+        c1.deal(c2, 2);
+        System.out.println(c1);
+        System.out.println(c2);
+        // c2.play(3);
+        System.out.println(c2);
 
     }
 
