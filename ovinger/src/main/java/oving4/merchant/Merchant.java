@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 
 
-public class Merchant {
+public class Merchant extends Item {
 
     private ArrayList<Item> inventory = new ArrayList<>(); // Inventory for merchant
 
