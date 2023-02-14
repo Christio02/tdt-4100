@@ -43,6 +43,7 @@ class Person {
 		
 		// Skrive ut alle personer over 17 år:
 		IsAdult ia = new IsAdult();
+
 		for (Person person : personer) {
 			if (ia.test(person)) {
 				System.out.println(person);
