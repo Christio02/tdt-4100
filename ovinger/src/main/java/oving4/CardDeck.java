@@ -82,10 +82,9 @@ public class CardDeck {
         // code goes here, should call a remove card method and add it
         // to the cardHand object
 
-        List<Card> temp = new ArrayList<>();
-        for (int i =0; i < cardDeck.size(); i++) {
-            Card card = cardDeck.remove(cardDeck.size() -1);
-            hand.addCard(card);
+        for (int i = 0; i < cardDeck.size(); i++) {
+            hand.addCard(cardDeck.get(cardDeck.size() - 1));
+            cardDeck.remove(cardDeck.size() - 1);
         }
 
     }
@@ -101,9 +100,7 @@ public class CardDeck {
         CardHand c2 = new CardHand();
         c1.deal(c2, 2);
         System.out.println(c1);
-        System.out.println(c2);
-        // c2.play(3);
-        System.out.println(c2);
+       
 
     }
 

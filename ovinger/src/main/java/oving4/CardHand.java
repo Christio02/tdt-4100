@@ -7,6 +7,11 @@ public class CardHand {
     private ArrayList<Card> cardHand = new ArrayList<Card>();
 
 
+    public CardHand() {
+    
+    }
+
+
     // get how many cards in hand
     public int getCardCount() {
         return this.cardHand.size();
@@ -26,12 +31,19 @@ public class CardHand {
     }
 
     public ArrayList<Card> play(int n) {
-        for (int i = cardHand.size() - 1; i >= 0 ; i--) {
-            cardHand.remove(n);
-        }
+    //     for (int i = cardHand.size() - 1; i >= 0 ; i--) {
+    //         cardHand.remove(n);
+    //     }
 
+    //     return cardHand;
+
+        if (n < 0 || n >= cardHand.size()) {
+            throw new IllegalArgumentException("Kan ikke fjerne kort utenfor håndstørrelsen!");
+        }
+        cardHand.remove(n);
         return cardHand;
     }
+    
 
 
 
