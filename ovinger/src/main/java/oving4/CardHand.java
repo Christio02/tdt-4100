@@ -26,10 +26,7 @@ public class CardHand {
     }
 
     public ArrayList<Card> play(int n) {
-        for (int i = cardHand.size() - 1; i >= 0 ; i--) {
-            cardHand.remove(n);
-        }
-
+        cardHand.remove(cardHand.get(n));
         return cardHand;
     }
 
