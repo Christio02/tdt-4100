@@ -34,9 +34,9 @@ public class Tweet {
         return this.account;
     }
 
-    public Tweet getOriginalTweet() {
-        if (this.tweet.)
-    }
+    // public Tweet getOriginalTweet() {
+
+    // }
 
 
 
