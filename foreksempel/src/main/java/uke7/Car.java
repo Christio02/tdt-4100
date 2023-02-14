@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Car implements Comparator<Car> {
     
-    private int seat;
+    private int seats;
     private String plate;
 
     public Car(int seats, String plate) {
@@ -17,7 +17,7 @@ public class Car implements Comparator<Car> {
     }
 
     public int getSeat() {
-        return seat;
+        return seats;
     }
     public String getPlate() {
         return plate;
@@ -41,11 +41,18 @@ public class Car implements Comparator<Car> {
         liste.add(car3);
         liste.add(car4);
         liste.add(car5);
+        System.out.println(liste);
+
 
 
         
 
 
+    }
+
+    @Override
+    public int compare(Car o1, Car o2) {
+        return o1.getSeat() - o2.getSeat();
     }
 
 
