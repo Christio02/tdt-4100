@@ -81,10 +81,10 @@ public class CardDeck {
     public void deal(CardHand hand, int n) {
         // code goes here, should call a remove card method and add it
         // to the cardHand object
-
-        for (int i = 0; i < cardDeck.size(); i++) {
-            hand.addCard(cardDeck.get(cardDeck.size() - 1));
-            cardDeck.remove(cardDeck.size() - 1);
+        
+        for (int i = n; i > 0; i--) {
+            Card card = cardDeck.remove(cardDeck.size() -1);
+            hand.addCard(card);
         }
 
     }
