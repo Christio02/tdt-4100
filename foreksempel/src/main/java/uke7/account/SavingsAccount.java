@@ -39,7 +39,6 @@ public class SavingsAccount implements Account {
     public int deposit(int amount) {
         balance += amount;
         return balance;
-
     }
 
     @Override
