@@ -1,6 +1,4 @@
-package oving5;
-
-import oving4.Card;
+package oving5.cards;
 
 public interface CardContainer {
 

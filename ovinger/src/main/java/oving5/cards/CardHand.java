@@ -1,8 +1,7 @@
-package oving5;
+package oving5.cards;
 
 import java.util.ArrayList;
 
-import oving4.Card;
 
 public class CardHand implements CardContainer{
 
