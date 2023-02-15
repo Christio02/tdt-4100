@@ -76,12 +76,8 @@ public class Department { // 1-n relation between parent department and child de
 
 
     public static void main(String[] args) {
-        Department dep1 = new Department();  // sets departmnet to null, default without constructor
-        Department dep2 = new Department(dep1);
-        dep2.getSubDepartments();
-
-        System.out.println(dep2.getSubDepartments());
-
+        Department child = new Department();  // sets departmnet to null, default without constructor
+        Department master = new Department(child);
 
     }
 }
