@@ -1,4 +1,4 @@
-package oving5.named;
+package oving5;
 
 public interface Named {
 
