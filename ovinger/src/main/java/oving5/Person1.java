@@ -25,7 +25,7 @@ public class Person1 implements Named {
     }
 
     @Override
-    public void setFamiliyName(String familyName) {
+    public void setFamilyName(String familyName) {
         this.familyName = familyName;
         
     }
@@ -50,23 +50,28 @@ public class Person1 implements Named {
 
     @Override
     public String toString() {
-        return "GivenName: " + getGivenName() + " " + "FamilyName: " +  getFamilyName() + "\n" + "Fullname: " + getFullName();
+        return "FullName: " + getFullName();
         
         
     }
 
     public static void main(String[] args) {
-        Person1 p1 = new Person1("Christopher", "Hansen");
-        Person2 p2 = new Person2("Malena Sletten");
+        Person1 p1 = new Person1("Christopher", "Trætteberg");
+        Person2 p2 = new Person2("Mats Trætteberg");
+
         System.out.println(p1.getFullName());
         System.out.println(p2.getFullName());
 
+        p2.setFamilyName("Hansen");
         List<Named> sortedAlpBName = new ArrayList<>();
         sortedAlpBName.add(p1);
         sortedAlpBName.add(p2);
 
-        // Collections.sort(sortedAlpBName, new NamedComparator());
-        // System.out.println(sortedAlpBName);
+        System.out.println(sortedAlpBName);
+        System.out.println("\n");
+
+        Collections.sort(sortedAlpBName, new NamedComparator());
+        System.out.println(sortedAlpBName);
         
     }
 

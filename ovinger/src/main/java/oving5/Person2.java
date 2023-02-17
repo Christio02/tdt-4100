@@ -3,7 +3,6 @@ package oving5;
 public class Person2 implements Named {
 
     private String fullName;
-    private Person1 p1;
 
     public Person2(String fullName) {
         this.fullName = fullName;
@@ -14,8 +13,9 @@ public class Person2 implements Named {
     public void setGivenName(String givenName) {
         int indexOfSpace = this.fullName.indexOf(" ");
         String thisGivenName = this.fullName.substring(0, indexOfSpace - 1);
-        thisGivenName = givenName;
-        this.fullName.replaceAll(thisGivenName, givenName);
+        String newFullName = this.fullName.replaceAll(thisGivenName, givenName);
+        
+        this.fullName = newFullName;
 
     }
 
@@ -28,11 +28,12 @@ public class Person2 implements Named {
 
 
     @Override
-    public void setFamiliyName(String familyName) {
-        int indexOfSpace = this.fullName.indexOf(" ");
-        String thisFamilyName = this.fullName.substring(indexOfSpace + 1, this.fullName.length());
-        thisFamilyName = familyName;
-        this.fullName.replaceAll(thisFamilyName, familyName);
+    public void setFamilyName(String familyName) {
+        int indexOfSpace = this.fullName.indexOf(" "); // get the index of the space in the full name
+        String thisFamilyName = this.fullName.substring(indexOfSpace + 1, this.fullName.length()); // replace the family name in the full name with the new one
+        String newFullName = this.fullName.replaceAll(thisFamilyName, familyName);
+
+        this.fullName = newFullName; // set fullname to temp string
     }
 
 
