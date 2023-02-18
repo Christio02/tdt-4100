@@ -1,4 +1,4 @@
-package oving5.cards;
+package oving5;
 
 import java.util.function.Predicate;
 
