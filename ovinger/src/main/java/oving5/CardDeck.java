@@ -1,13 +1,14 @@
 package oving5;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 
 
 
 
-public class CardDeck implements CardContainer{
+public class CardDeck implements CardContainer, Iterable<Card>{
 
     private ArrayList<Card> cardDeck = new ArrayList<Card>();;
 
@@ -40,31 +41,6 @@ public class CardDeck implements CardContainer{
 
     }
 
-    // method that shuffles card
-    // public ArrayList<Card> shufflePerfectly() {
-    //     int mid = cardDeck.size() / 2;
-    //     int size = cardDeck.size();
-
-    //     ArrayList<Card> firstHalf = new ArrayList<>(cardDeck.subList(0, mid));
-    //     ArrayList<Card> secondHalf = new ArrayList<>(cardDeck.subList(mid, size));
-
-    //     ArrayList<Card> shuffled = new ArrayList<>();
-    //     // should add element from secondhalf and add it to the firsthalf
-    //     // firsthalf has these indexes: 0, 2, 4, 6 etc.
-    //     // secondhalf has 1, 3, 5, 7 etc.
-    //     for (int i = 0; i < size; i++) {
-
-    //         if (i % 2 == 0) {
-    //             shuffled.add(firstHalf.get(i / 2)); // if i is even then add it
-    //         } else {
-    //             shuffled.add(secondHalf.get(i / 2)); // if i is odd then add alternating cards
-    //         }
-
-    //     }
-    //     return cardDeck = shuffled;
-    // }
-
-    // return total card objects in deck
 
     public int getCardCount() {
         return this.cardDeck.size();
@@ -78,25 +54,15 @@ public class CardDeck implements CardContainer{
 
     }
 
-    // move cards from cardDeck object to cardHand class (object)
-
-    // public void deal(CardHand hand, int n) {
-    //     // code goes here, should call a remove card method and add it
-    //     // to the cardHand object
-        
-    //     for (int i = n; i > 0; i--) {
-    //         Card card = cardDeck.remove(cardDeck.size() -1);
-    //         hand.addCard(card);
-    //     }
-
-    // }
-
-    // card predicate methods
 
     public void getCard() {
     
     }
 
+    @Override
+    public Iterator<Card> iterator() {
+        return new CardContainerIterator(this);
+    }
 
 
     @Override
@@ -108,9 +74,23 @@ public class CardDeck implements CardContainer{
         CardDeck c1 = new CardDeck(3);
         System.out.println(c1);
         
-       
+       CardContainerIterator iterator = new CardContainerIterator(c1); // creates new iterator for carddeck
+       while (iterator.hasNext()) { // while there are cards left
+        Card card = iterator.next(); // increment and get card
+        System.out.println(card); // print out each card object from cardDeck
+       }
+
+       CardHand c2 = new CardHand();
+       CardContainerIterator iterator2 = new CardContainerIterator(c2);
+       while (iterator2.hasNext()) {
+        Card card2 = iterator2.next();
+        System.out.println(card2);
+       }
 
     }
+
+
+   
 
 
 }

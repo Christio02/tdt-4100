@@ -1,9 +1,10 @@
 package oving5;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
-public class CardHand implements CardContainer{
+public class CardHand implements CardContainer, Iterable<Card>{
 
     private ArrayList<Card> cardHand = new ArrayList<Card>();
 
@@ -52,9 +53,16 @@ public class CardHand implements CardContainer{
     public ArrayList<Card> getCardHand() {
         return this.cardHand;
     }
+    @Override
+    public Iterator<Card> iterator() {
+        return new CardContainerIterator(this); // Iterator for the CardHand class
+    }
 
     public static void main(String[] args) {
         
     }
+
+
+   
     
 }
