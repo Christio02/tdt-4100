@@ -12,7 +12,7 @@ public class Person2 implements Named {
     @Override
     public void setGivenName(String givenName) {
         int indexOfSpace = this.fullName.indexOf(" ");
-        String thisGivenName = this.fullName.substring(0, indexOfSpace - 1);
+        String thisGivenName = this.fullName.substring(0, indexOfSpace);
         String newFullName = this.fullName.replaceAll(thisGivenName, givenName);
         
         this.fullName = newFullName;
@@ -45,8 +45,8 @@ public class Person2 implements Named {
 
 
     @Override
-    public void setFullName(String givenName, String familyName) {
-        this.fullName = givenName + " " + familyName;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;;
     }
 
 

@@ -10,7 +10,8 @@ public class Person1 implements Named {
     private String familyName;
 
     public Person1 (String givenName, String familyName) {
-        setFullName(givenName, familyName);
+        this.givenName = givenName;
+        this.familyName = familyName;
     }
 
     @Override
@@ -37,9 +38,10 @@ public class Person1 implements Named {
     }
 
     @Override
-    public void setFullName(String givenName, String familyName) {
-        this.givenName = givenName;
-        this.familyName = familyName;
+    public void setFullName(String fullName) {
+        String [] names = fullName.split(" ");
+        setGivenName(names[0]);
+        setFamilyName(names[1]);
         
     }
 
@@ -58,20 +60,6 @@ public class Person1 implements Named {
     public static void main(String[] args) {
         Person1 p1 = new Person1("Christopher", "Trætteberg");
         Person2 p2 = new Person2("Mats Trætteberg");
-
-        System.out.println(p1.getFullName());
-        System.out.println(p2.getFullName());
-
-        p2.setFamilyName("Hansen");
-        List<Named> sortedAlpBName = new ArrayList<>();
-        sortedAlpBName.add(p1);
-        sortedAlpBName.add(p2);
-
-        System.out.println(sortedAlpBName);
-        System.out.println("\n");
-
-        Collections.sort(sortedAlpBName, new NamedComparator());
-        System.out.println(sortedAlpBName);
         
     }
 

@@ -7,7 +7,7 @@ public interface Named {
     void setFamilyName(String familyName);
     String getFamilyName();
     // should concate the two strings
-    void setFullName(String givenName, String familyName); 
+    void setFullName(String fullName); 
     String getFullName();
     
 
