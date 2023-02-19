@@ -2,13 +2,17 @@ package oving5;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 
 
 
 
 
-public class CardDeck implements CardContainer, Iterable<Card>{
+public class CardDeck implements CardContainer, Iterable<Card>, Predicate<Card>{
 
     private ArrayList<Card> cardDeck = new ArrayList<Card>();;
 
@@ -87,6 +91,35 @@ public class CardDeck implements CardContainer, Iterable<Card>{
         System.out.println(card2);
        }
 
+    }
+
+
+    @Override
+    public boolean hasCard(Predicate<Card> predicate) {
+       return cardDeck.stream().anyMatch(predicate); // Check if the card deck contains a card that matches the predicate.
+    
+    }
+
+    public int getCardCount(Predicate<Card> predicate) {
+
+        return (int) cardDeck.stream().filter(predicate).count(); // returns int of filtered cards, count counts filtered predicate 
+
+    }
+
+    public List<Card> getCards(Predicate<Card> predicate) {
+        return cardDeck.stream().filter(predicate).collect(Collectors.toList()); // Filters cardDeck and collects all matches and add to list
+    }
+
+
+    @Override
+    public boolean test(Card arg0) {
+        return false;
+    }
+
+
+    @Override
+    public boolean hasCard(Object object) {
+        return false;
     }
 
 
