@@ -1,6 +1,6 @@
 package oving5;
 
-public interface StringGrid {
+public interface StringGrid extends Iterable<String>{
     /*
 An interface with methods for managing the content of a String grid.
 The grid has a number of rows (the grid's height) and columns (the grid's width).
