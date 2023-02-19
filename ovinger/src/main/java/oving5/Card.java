@@ -1,7 +1,7 @@
 package oving5;
 
 
-public class Card {
+public class Card implements Comparable<Card> {
 
     private int value;
     private char color;
@@ -45,6 +45,13 @@ public class Card {
     @Override
     public String toString() {
         return color + "" + value;
+    }
+
+    @Override
+    public int compareTo(Card arg0) {
+        if (getSuit() == 'C') {
+            
+        }
     }
 
 }
