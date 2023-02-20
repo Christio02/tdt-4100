@@ -15,9 +15,10 @@ public class StringMergingIteratorProgram {
 
 		List<String> values = new ArrayList<String>();
 
-		while (mergeIterator.hasNext()) {
-			values.add(mergeIterator.next());
+		while (mergeIterator.hasNext()) { 
+			values.add(mergeIterator.next()); 
 		}
+	
 
 		List<String> expectedOutput = new ArrayList<String>(List.of("a", "c", "b", "d", "e"));
 
