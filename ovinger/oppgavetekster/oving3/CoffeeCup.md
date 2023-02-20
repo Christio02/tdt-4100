@@ -29,12 +29,12 @@ CoffeeCup-koden finner du i [oving3/debugging/CoffeeCup.Java](../../src/main/jav
 
 ### Del 1
 
-Målet for oppgaven er å finne en feil i funksjonen `part1()` ved hjelp av debuggeren i VSCode. Kjør hovedprogrammet i debug-modus, og bruk dette til å finne hva kapasiteten og nåværende volum av kaffe er like før programmet utløser et unntak.
+Målet for oppgaven er å finne feilene i funksjonen `part1()` ved hjelp av debuggeren i VSCode. Kjør hovedprogrammet i debug-modus, og bruk dette til å finne hva kapasiteten og nåværende volum av kaffe er like før programmet utløser unntak.
 
-Finn også ut hvilken metode i **CoffeeCup** som utløser unntaket.
+Finn også ut hvilke metoder i **CoffeeCup** som utløser unntak.
 
 ### Del 2
 
-Du fant feilen i oppgave 1, bra! Kommentér ut kallet til `part1()` i hovedprogrammet, så slipper vi å ha mer med det å gjøre.
+Du fant feilene i oppgave 1, bra! Kommentér ut kallet til `part1()` i hovedprogrammet, så slipper vi å ha mer med det å gjøre.
 
-Du skal nå finne ut hvordan nåverende volum av kaffe endrer seg i `part2()`, før programmet utløser et unntak. Lag en liste over hvilke verdier nivået har. Hvilken metode i **CoffeeCup** utløser et unntak denne gangen? Hvilken type unntak blir utløst?
+Du skal nå finne ut hvordan nåverende volum av kaffe endrer seg i `part2()`, før programmet utløser unntak. Lag en liste over hvilke verdier nivået har. Hvilke metoder i **CoffeeCup** utløser unntak denne gangen? Hvilken typer unntak blir utløst?
