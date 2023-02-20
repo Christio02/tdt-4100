@@ -7,11 +7,14 @@ public class StockMain {
         Stock apple = new Stock("aapl", 225);
 
 
-        Observer observer1 = new Observer(apple);
         google.setPrice(130);
         apple.setPrice(215);
 
-        System.out.println(observer1);
+        StockIndex nasDx = new StockIndex("NASDQ");
+        nasDx.addStock(apple);
+        nasDx.addStock(google);
+        System.out.println(nasDx);
+
 
 
 

@@ -21,7 +21,6 @@ public class Stock {
         }
         double oldPrice = this.price; // gets oldPrice
         this.price = newPrice; // sets newPrice
-        System.out.println("Alert! Stockprice changed for: " + this.getTicker() + " " + " New stock price: " + newPrice);
         alertStockListener(oldPrice, newPrice); // calls alertStockListeners when this method is called
     }
 
@@ -48,6 +47,19 @@ public class Stock {
             stockListener.stockPriceChanged(this, oldPrice, newPrice); // sets ticker to (this) Stock object, and sets oldPrice and Newprice
     }
 
+    }
+
+    public List<StockListener> getStockListeners() {
+        return this.stockListeners;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+            " ticker='" + getTicker() + "'" +
+            ", price='" + getPrice() + "'" +
+            ", stockListeners='" + getStockListeners() + "'" +
+            "}";
     }
 
 
