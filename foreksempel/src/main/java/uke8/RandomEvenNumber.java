@@ -27,13 +27,13 @@ public class RandomEvenNumber implements Iterator<Integer>{
     public static void main(String[] args) {
         Iterator<Integer> it = new RandomEvenNumber();
 
-        for (int i = 0; i < 101; i++) {
-            System.out.println(i+":"+it.next());
-        }
+        // for (int i = 0; i < 101; i++) {
+        //     System.out.println(i+":"+it.next());
+        // }
 
         // Lager en ny en, siden den forrige ble brukt opp. Er jo bare 100 tall per gang!
         // it = new RandomEvenNumber();
         // while (it.hasNext())
-        //     System.out.println(it.next());
+        //      System.out.println(it.next());
     }
 }
