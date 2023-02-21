@@ -11,16 +11,17 @@ public class StockIndex implements StockListener {
     private List<Stock> listStocks = new ArrayList<>();
     
     
-    public StockIndex(String name) {
-        this.name = name;
+    // Test failed because of these constructors
+    // public StockIndex(String name) {
+    //     this.name = name;
 
-    }
+    // }
 
-    public StockIndex(String name, Stock stock) {
-        this.name = name;
-        this.listStocks.add(stock);
-        index += stock.getPrice();
-    }
+    // public StockIndex(String name, Stock stock) {
+    //     this.name = name;
+    //     this.listStocks.add(stock);
+    //     index += stock.getPrice();
+    // }
 
     public StockIndex(String name, Stock... stocks) {
         this.name = name;
@@ -28,8 +29,8 @@ public class StockIndex implements StockListener {
         double tmpIndex = 0;
 
         for (Stock stock : listStocks) { // go though listStocks and add set new index price to every stocks price
-            tmpIndex += stock.getPrice();
-            stock.addStockListener(this);
+            tmpIndex += stock.getPrice(); // adds up tmpIndex for all stocks in listStocks
+            stock.addStockListener(this); // adds THIS index to stock 
         }
         index = tmpIndex;
     }
@@ -61,16 +62,18 @@ public class StockIndex implements StockListener {
 
     @Override
     public void stockPriceChanged(Stock stock, double oldValue, double newValue) {
-        // double total = 0.0;
-        // for (Stock stock2 : listStocks) {
-        //     total += newValue;
+        double total = 0.0;
+        for (Stock stock2 : listStocks) {
+            if (stock == stock2) { // if stock changed is i listStocks
+                total += newValue; // add newValue to total
+            }
+            else {
+                total += stock2.getPrice(); // else add stock2 getPrice
+            }
             
-        // }
-        // index = total;
-        if (oldValue != newValue) {
-            index = index - oldValue + newValue;
+            
         }
-        
+        index = total; 
         
     }
 
