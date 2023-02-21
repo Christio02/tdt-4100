@@ -18,15 +18,22 @@ public class StockIndex implements StockListener {
     public StockIndex(String name, Stock stock) {
         this.name = name;
         this.listStocks.add(stock);
+        index += stock.getPrice();
     }
 
     public StockIndex(String name, Stock... stock) {
         this.name = name;
+        this.listStocks.addAll(List.of(stock));
+        double tmpIndex = 0;
+        for (Stock stock2 : listStocks) {
+            tmpIndex += stock2.getPrice();
+        }
+        index = tmpIndex;
     }
 
     public void addStock(Stock stock) {
         if (this.listStocks.contains(stock)) {
-            throw new IllegalArgumentException("Can't add duplicate stock!");
+            this.index -= stock.getPrice(); // remove duplicate price at index
         }
         listStocks.add(stock);
         this.index += stock.getPrice(); // adds stock object price to index
@@ -34,7 +41,11 @@ public class StockIndex implements StockListener {
     }
 
     public void removeStock(Stock stock) {
-        this.index -= stock.getPrice(); // removes stock object price from index
+        int indexStock = listStocks.indexOf(stock);
+        for (Stock stock2 : listStocks) {
+            listStocks.remove(indexStock);
+            index -= stock2.getPrice();
+        }
     }
 
     public double getIndex() {
