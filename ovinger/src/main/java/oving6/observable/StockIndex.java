@@ -3,10 +3,11 @@ package oving6.observable;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class StockIndex implements StockListener {
 
     private String name;
-    private double index;
+    private double index = 0;
     private List<Stock> listStocks = new ArrayList<>();
     
     
@@ -21,18 +22,20 @@ public class StockIndex implements StockListener {
         index += stock.getPrice();
     }
 
-    public StockIndex(String name, Stock... stock) {
+    public StockIndex(String name, Stock... stocks) {
         this.name = name;
-        this.listStocks.addAll(List.of(stock));
+        this.listStocks.addAll(List.of(stocks));
         double tmpIndex = 0;
-        for (Stock stock2 : listStocks) {
-            tmpIndex += stock2.getPrice();
+
+        for (Stock stock : listStocks) { // go though listStocks and add set new index price to every stocks price
+            tmpIndex += stock.getPrice();
+            stock.addStockListener(this);
         }
         index = tmpIndex;
     }
 
     public void addStock(Stock stock) {
-        if (this.listStocks.contains(stock)) {
+        if (listStocks.contains(stock)) {
             this.index -= stock.getPrice(); // remove duplicate price at index
         }
         listStocks.add(stock);
@@ -41,11 +44,15 @@ public class StockIndex implements StockListener {
     }
 
     public void removeStock(Stock stock) {
-        int indexStock = listStocks.indexOf(stock);
-        for (Stock stock2 : listStocks) {
-            listStocks.remove(indexStock);
-            index -= stock2.getPrice();
+        if (!this.listStocks.contains(stock)) {
+            ; // do nothing 
         }
+        else {
+            int indexStock = listStocks.indexOf(stock);
+            listStocks.remove(indexStock);
+            index -= stock.getPrice();
+        }
+        
     }
 
     public double getIndex() {
@@ -54,17 +61,17 @@ public class StockIndex implements StockListener {
 
     @Override
     public void stockPriceChanged(Stock stock, double oldValue, double newValue) {
-        double total = 0.0;
-        for (Stock stock2 : listStocks) {
-            if (stock == stock2) {
-                total += newValue;
-            }
-            else {
-                total += stock2.getPrice();
-            }
+        // double total = 0.0;
+        // for (Stock stock2 : listStocks) {
+        //     total += newValue;
             
+        // }
+        // index = total;
+        if (oldValue != newValue) {
+            index = index - oldValue + newValue;
         }
-        index = total / listStocks.size();
+        
+        
     }
 
     
@@ -73,13 +80,14 @@ public class StockIndex implements StockListener {
     public String toString() {
         return "{" +
             " name='" + getName() + "'" +
-            ", index='" + getIndex() + "'" +
+            ", index='" + getIndex() + "'"  + 
             "}";
     }
 
     public List<Stock> getListStocks() {
         return this.listStocks;
     }
+
 
     public String getName() {
         return this.name;

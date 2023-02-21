@@ -19,9 +19,13 @@ public class Stock {
         if (newPrice <= 0) {
             throw new IllegalArgumentException("Cannot set stock price to less or equalt to 0");
         }
-        double oldPrice = this.price; // gets oldPrice
-        this.price = newPrice; // sets newPrice
-        alertStockListener(oldPrice, newPrice); // calls alertStockListeners when this method is called
+        if (this.price != newPrice) {
+            double oldPrice = this.price; // gets oldPrice
+            this.price = newPrice; // sets newPrice
+            alertStockListener(oldPrice); // calls alertStockListeners when this method is called
+        }
+            
+            
     }
 
     public String getTicker() {
@@ -42,9 +46,9 @@ public class Stock {
         stockListeners.remove(listenerIndex); // removes correct listener from index
     }
 
-    private void alertStockListener(double oldPrice, double newPrice) {
+    public void alertStockListener(double oldPrice) {
         for (StockListener stockListener : stockListeners) { // goes through all listeners
-            stockListener.stockPriceChanged(this, oldPrice, newPrice); // sets ticker to (this) Stock object, and sets oldPrice and Newprice
+            stockListener.stockPriceChanged(this, oldPrice, this.price); // sets ticker to (this) Stock object, and sets oldPrice and Newprice
     }
 
     }
