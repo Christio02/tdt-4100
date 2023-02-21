@@ -1,4 +1,4 @@
-package uke8.personlambda;
+package uke8.kode;
 
 public class Person {
 
