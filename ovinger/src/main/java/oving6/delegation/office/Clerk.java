@@ -6,10 +6,8 @@ import java.util.function.BinaryOperator;
 
 public class Clerk implements Employee{
 
-    private Printer printer;
+    private Printer printer = null;
     private int taskCount = 0;
-    private List<String> listOfDocuments= new ArrayList<String>();
-
 
     public Clerk(Printer printer) {
         this.printer = printer;
@@ -25,8 +23,11 @@ public class Clerk implements Employee{
 
     @Override
     public void printDocument(String document) {
-        taskCount++;
-        printer.printDocument(document, this); // prints document for this clerk
+        if (printer != null) {
+            taskCount++;
+            this.printer.printDocument(document, this); // prints document for this clerk
+        }
+           
     }
 
     @Override
@@ -38,5 +39,6 @@ public class Clerk implements Employee{
     public int getResourceCount() {
         return 1;
     }
-    
+
+
 }
