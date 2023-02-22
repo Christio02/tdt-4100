@@ -19,10 +19,7 @@ public class Dog2 extends AbstractAnimal {
     public static void main(String[] args) {
         AbstractAnimal dog = new Dog2("Charlie", 7);
 
-        
-
-
-
+    
 
     }
 
