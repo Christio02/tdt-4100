@@ -13,6 +13,9 @@ public class Printer {
         if (!listOfDocuments.contains(document)) {
             listOfDocuments.add(document);
         }
+        else {
+            ;
+        }
         
     }
 
