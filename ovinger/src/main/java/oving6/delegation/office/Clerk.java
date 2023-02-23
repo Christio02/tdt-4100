@@ -1,7 +1,5 @@
 package oving6.delegation.office;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.function.BinaryOperator;
 
 public class Clerk implements Employee{
@@ -39,6 +37,8 @@ public class Clerk implements Employee{
     public int getResourceCount() {
         return 1;
     }
+
+
 
 
 }

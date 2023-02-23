@@ -16,6 +16,9 @@ public interface Employee {
     // amount of employees available including employee object the method is called on, should count for
     // all employee object down in hierarchy
     public int getResourceCount();
+    
+    
+
 
 
 }

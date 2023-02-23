@@ -1,15 +1,14 @@
 package oving6.delegation.office;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Printer {
 
-    private Map<Employee, ArrayList<String>> totalTasks = new HashMap<Employee, ArrayList<String>>(); // new "dictionary" that keeps track of all employees and their documents 
+    private Map<Employee, ArrayList<String>> totalTasks = new HashMap<Employee, ArrayList<String>>(); // new "dictionary" that keeps track of all employees and their documents
+
 
     public void printDocument(String document, Employee employee) {
         System.out.println("Document: " + " " + document);
@@ -24,13 +23,15 @@ public class Printer {
         
     }
 
+
     public List<String> getPrintHistory(Employee employee) {
-        if (totalTasks.get(employee) == null) {
-            
-            return new ArrayList<String>(); // returns empty list of employee has no tasks
+        List<String> printHistory = new ArrayList<String>(); // creates copy
+        if (totalTasks.containsKey(employee)) { // if it has an employee in dictionary 
+            printHistory = new ArrayList<String>(totalTasks.get(employee)); // then add the task from employee
         }
-        return Collections.unmodifiableList(totalTasks.get(employee));
-        // return totalTasks.get(employee); // returns list of all documents printed by employee;
-    }   // essentially returns the key value pair of the employee
+        return printHistory;
+
+    }
+    
 
 }
