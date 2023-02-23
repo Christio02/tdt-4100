@@ -49,14 +49,15 @@ public class Manager implements Employee {
 
     @Override
     public int getResourceCount() {
+        int resourceCount = 1;
+
         for (Employee employee : listOfEmployees) {
-            return employee.getResourceCount() + 1;
+            resourceCount += employee.getResourceCount();
         }
-        return  0;
-    }  
 
-    
+        return resourceCount;
 
+    }
 
 
 }
