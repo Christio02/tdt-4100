@@ -17,6 +17,7 @@ public class Manager implements Employee {
         }
         
         this.listOfEmployees = employees;
+
     }
 
 
@@ -33,14 +34,11 @@ public class Manager implements Employee {
     public void printDocument(String document) { 
        for (Employee employee : listOfEmployees) {
         // need to check if employee already has printed or done a calculation
-            if (!employee.has) {
-                employee.printDocument(document);
+            employee.printDocument(document);      
                 // need to somehow increment manager taskcount
             }
             
        }
-
-    }
 
     @Override
     public int getTaskCount() {
@@ -48,23 +46,14 @@ public class Manager implements Employee {
         for (Employee employee : listOfEmployees) { // go through list of employees and return amount of task each one of them hava completed
             // need to only delegate one task per clerk each time
             taskCount += employee.getTaskCount();
-            
-            
         }
-        return taskCount - 1; // subtract managers task, because we only want clerks tasks
+        return taskCount; // subtract managers task, because we only want clerks tasks
 
         
     }
 
     // need to add a method that checks how many tasks manager is returning
 
-    public boolean checkHowManyTask() {
-        int tasks = this.getTaskCount();
-        if (tasks == 1) {
-            return true;
-        }
-        return false;
-    }
 
     @Override
     public int getResourceCount() {
