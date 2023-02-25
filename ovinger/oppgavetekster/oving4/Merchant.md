@@ -28,7 +28,7 @@ I tillegg skal `Item` ha følgende metoder:
 I tillegg skal `Merchant` ha følgende metoder:
 
 - `void obtainItem(Item)` - Lar selgeren finne og få eierskap av et Item-objekt
-- `void removeItem()` - Fjerner et Item-objekt fra inventaret til selgeren
+- `void removeItem(Item)` - Fjerner et Item-objekt fra inventaret til selgeren
 - `void sellItem(Item, Merchant)` - Fremstiller en transaksjon mellom to selgere. Vi tar kun for oss situasjoner der en selger kjøper et Item-objekt fra selgeren som kaller på denne metoden. Varen som selges bytter inventar og balansene til selgerne justeres tilsvarende prisen på varen. En _IllegalStateException_ skal utløses dersom kjøperen ikke har råd til varen, dersom selgeren ikke eier objektet som selges og dersom en selger prøver å selge noe til seg selv.
 - `void itemSale(double, Item)` - Selgeren skal kunne ha et salg på en av eiendelene sine. Avslaget skal være mellom 0 og 1, og regnes som prosentvis avslag på prisen. For eksempel dersom Item-objektet koster 100 mynter og man kaller på metoden med 0.3 som avslag, skal den nye prisen være 70 gullmynter.
 - `void inventorySale(double)` - Selgeren sliter med salgene sine, og vil derfor starte et salg på hele inventaret sitt.
