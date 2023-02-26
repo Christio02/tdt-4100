@@ -15,9 +15,9 @@
 ## Dette må du gjøre
 Oppgavene skal lagres i `ovinger/src/main/java/oving7`.
 
-I begge delene er antageligvis vanskelighetsgraden stigende. Alle er høyst eksamensrelevante og det anbefales følgelig å ta en titt på samtlige.
+I del 1 og 2 er antageligvis vanskelighetsgraden stigende. Alle er høyst eksamensrelevante og det anbefales følgelig å ta en titt på samtlige.
 
-For å få 2 poeng på øvingen må det gjennomføres til sammen *4* valgfrie oppgaver fra del 1 og 2.
+For å få 2 poeng på øvingen må det gjennomføres til sammen *4* valgfrie oppgaver fra del 1 og 2, samt del 3.
 ### Del 1: Arv
 Velg og gjennomfør *minst én* av oppgavene om arv:
 
