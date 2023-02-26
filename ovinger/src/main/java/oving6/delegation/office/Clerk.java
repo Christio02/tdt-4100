@@ -1,5 +1,7 @@
 package oving6.delegation.office;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.BinaryOperator;
 
 
@@ -8,6 +10,7 @@ public class Clerk implements Employee{
 
     private Printer printer = null;
     private int taskCount = 0;
+    
 
 
     public Clerk(Printer printer) {
@@ -25,9 +28,13 @@ public class Clerk implements Employee{
     public void printDocument(String document) {
         if (printer != null) {
             taskCount++;
+           
             this.printer.printDocument(document, this); // prints document for this clerk
         }
            
+    }
+    public boolean hasCompletedTask() {
+        return taskCount > 0; // checks if clerk taskcount is more than 0
     }
 
     @Override

@@ -10,6 +10,7 @@ import java.util.function.BinaryOperator;
 public class Manager implements Employee {
 
     private Collection<Employee> listOfEmployees = new ArrayList<Employee>();
+    private int taskCount = 0;
 
     public Manager(Collection<Employee> employees) {
         if (employees.size() == 0) {    
@@ -34,17 +35,23 @@ public class Manager implements Employee {
     public void printDocument(String document) { 
        for (Employee employee : listOfEmployees) {
         // need to check if employee already has printed or done a calculation
-            employee.printDocument(document);      
-                // need to somehow increment manager taskcount
+            if (employee instanceof Clerk) { // if the employee in list is Clerk
+                Clerk clerk = (Clerk) employee; // then cast employee as clerk
+                if (!clerk.hasCompletedTask()) { // if clerk has not yet completed task, then delegate to that clerk
+                    clerk.printDocument(document);
+                    return; // do not continue
+                }
+            } else  {
+                employee.printDocument(document);
             }
-            
+        }
+
        }
 
     @Override
     public int getTaskCount() {
         int taskCount = 0;
         for (Employee employee : listOfEmployees) { // go through list of employees and return amount of task each one of them hava completed
-            // need to only delegate one task per clerk each time
             taskCount += employee.getTaskCount();
         }
         return taskCount; // subtract managers task, because we only want clerks tasks
