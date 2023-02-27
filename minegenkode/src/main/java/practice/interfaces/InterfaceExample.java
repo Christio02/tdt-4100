@@ -10,7 +10,7 @@ interface WaterBottleInterface { // an interface is an outline for a class
     void fillUp();
     void pourOut();
     
-    void changeColor(String newCol) 
+    void changeColor(String newCol);
 
 }
 
@@ -29,7 +29,7 @@ public class InterfaceExample implements WaterBottleInterface {
 
     @Override
     public void changeColor(String newCol) {
-        color = newCol;
+        
         
     }
 
