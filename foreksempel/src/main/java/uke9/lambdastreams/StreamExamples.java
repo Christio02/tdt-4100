@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.String;
+import java.net.Socket;
 import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -34,7 +35,7 @@ public class StreamExamples {
 		// Summer tall:
 		// System.out.print("\nSum av tall, med reduce: ");
 		// System.out.println(liste.stream()
-		// 		.reduce(0, (sum, i) -> sum + i));
+		// 		.reduce(0, (sum, i) -> sum + i)); 
 
 		List<String> people = Arrays.asList("Al", "Skybert", "Farfar", 
 		"Farmor", "Håvard", "Jørn", "Andrea", "Børge");
@@ -74,7 +75,7 @@ public class StreamExamples {
 		// 		.sum());
 
 
-
+		
 		// Lage en kontinuerlig strøm av heltall som deles på et annet tall, og så skrive ut de første 100:
 		System.out.println("\nBare et skrudd eksempel på hva en kan. Limit er bra, ellers ville den fortsatt...");
 		IntStream
@@ -100,7 +101,7 @@ public class StreamExamples {
 		// .map(p -> p+"\t"+p.length())
 		// .forEach(System.out::println);
 
-		// Lage en samling som inneholder alle personene som starter med "A" og lengde over fire.
+		// // Lage en samling som inneholder alle personene som starter med "A" og lengde over fire.
 		// System.out.print("\nNavn som starter med F og lengde over 6: ");
 		// System.out.println(folk.stream()
 		// 		.filter(p -> p.startsWith("F"))
@@ -136,9 +137,9 @@ public class StreamExamples {
 		 *  skal være første gang reduce kalles. Neste gang kjøres den nåværende verdien av sum inn.
 		 *  På denne måten kan en legge sammen alle verdiene i rekken.
 		 */
-		// System.out.println("BinaryOperator: " + IntStream.range(0,100).reduce(0, (sum, i) -> (sum + i)));
-        // // Eller penere:
-		// System.out.println("BinaryOperator: " + IntStream.range(0,100).reduce(0, Integer::sum));
+		System.out.println("BinaryOperator: " + IntStream.range(0,100).reduce(0, (sum, i) -> (sum + i)));
+        // Eller penere:
+		System.out.println("BinaryOperator: " + IntStream.range(0,100).reduce(0, Integer::sum));
 		
 		
 		// UnaryOperator:

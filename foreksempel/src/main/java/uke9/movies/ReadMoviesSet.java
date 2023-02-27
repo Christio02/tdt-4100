@@ -53,17 +53,19 @@ public class ReadMoviesSet {
         ReadMoviesSet rf = new ReadMoviesSet("movies.txt");
         // System.out.println("Første film: "+rf.movies.stream().findFirst().get());
         // System.out.println("\nAntall filmer: "+
-        //     rf.movies.stream().filter(m -> m.getData("titleType").equals("movie")).count());
+        //     rf.movies.stream()
+        //     .filter(m -> m.getData("titleType").equals("movie"))
+        //     .count());
 
 
         Predicate<GenericHashMap> isMovie = movie -> movie.getData("titleType").equals("movie");
 
-        // System.out.println("\nFilmer med 'The' i tittel: "+
+        // System.out.println("\nFilmtitler med 'The' i tittel: "+
         // rf.movies.stream()
-        //     .filter(m -> m.getData("titleType").equals("movie"))
-        //     .filter(m -> m.getData("primaryTitle").contains("The"))
+        //     .filter(isMovie) // need to check if movie
+        //     .filter(m -> m.getData("primaryTitle").contains("The")) // check if title contains "The"
         //     // .peek(System.out::println)
-        //     .map(m -> m.getData("primaryTitle"))
+        //     .map(m -> m.getData("primaryTitle")) // then transform to primarytitle
         //     .toList());
 
         

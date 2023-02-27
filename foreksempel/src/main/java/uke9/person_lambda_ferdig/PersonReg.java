@@ -185,11 +185,13 @@ public class PersonReg implements Iterable<Person> {
             if (person.getAge() > 17)
                 names.add(person.getName());
         }
+
+
         System.out.println(names);
-        System.out.println(pr.persons.stream()
-            .filter(p -> p.getAge() > 17)
-            .map(p -> p.getName() + ":"+p.getAge())
-            .toList());
+        System.out.println(pr.persons.stream() // calls stream, does not change original data
+            .filter(p -> p.getAge() > 17) // filters (if function) the objects
+            .map(p -> p.getName() + ":"+p.getAge()) // transforms into names and ages
+            .toList()); // makes it a list
     }
 
     

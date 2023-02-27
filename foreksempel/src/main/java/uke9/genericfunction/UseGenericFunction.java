@@ -1,9 +1,13 @@
 package uke9.genericfunction;
 
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class UseGenericFunction {
     
     public static void main(String[] args) {
+
+        Collection<String> foo = new ArrayList<>();
 
         MyGeneric<Integer> square = n -> n * n;
         System.out.println(square.compute(4));
