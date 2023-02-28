@@ -13,7 +13,7 @@ import java.util.Collection;
  * En av maaange måter en kan lagre til fil -  denne utnytter grensesnittet Serializable
  * Tilsvarer Python sin pickle.
  */
-public class Dyrehage_ferdig implements Serializable{
+public class Dyrehage implements Serializable{
 
 	/**
 	 * 
@@ -36,7 +36,7 @@ public class Dyrehage_ferdig implements Serializable{
 	}
 	
 	public static void main(String[] args) {
-		Dyrehage_ferdig dh = new Dyrehage_ferdig();
+		Dyrehage dh = new Dyrehage();
 		dh.leggTil(new Dyr("Ku", "mø", 4));
 		dh.leggTil(new Dyr("Katt", "mjau", 4));
 		dh.leggTil(new Dyr("Flaggermus", "pip", 2));

@@ -9,7 +9,7 @@ public class BrukPrintStream {
 
         String tekst = "Dette er kort tekst jeg vil skrive til en fil";
 
-        try (FileOutputStream fos = new FileOutputStream("c:/Users/borgeh/utfil.txt")) {
+        try (FileOutputStream fos = new FileOutputStream("c:/Users/borgeha/utfil.txt")) {
             PrintStream output = new PrintStream(fos);
             output.println(tekst);
             // output.close(); // Ikke nødvendig siden den lukker automatisk

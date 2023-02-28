@@ -8,7 +8,7 @@ import java.io.Reader;
 public class FilLeser {
     
     public static void main(String[] args) {
-        try (Reader reader = new FileReader(new File("C:/Users/borgeh/foo.txt"))) {
+        try (Reader reader = new FileReader(new File("C:/z/tekst.txt"))) {
             char[] buffer = new char[1000];
             int charCount = reader.read(buffer);
             System.out.println("Antall tegn i filen: "+charCount);
