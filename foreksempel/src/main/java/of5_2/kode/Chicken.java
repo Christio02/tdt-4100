@@ -3,9 +3,14 @@ package of5_2.kode;
 public class Chicken implements Animal {
 
     private int age;
-    private String name; 
+    private String name;
 
     public Chicken(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    public Chicken(String name, int age) {
         this.age = age;
         this.name = name;
     }
@@ -28,7 +33,7 @@ public class Chicken implements Animal {
         return sound;
     }
 
-    public void layEgg(){
+    public void layEgg() {
         return;
     }
 
@@ -41,5 +46,5 @@ public class Chicken implements Animal {
     public int compareTo(Animal o) {
         return this.getAge() - o.getAge();
     }
-    
+
 }

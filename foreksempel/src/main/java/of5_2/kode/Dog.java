@@ -1,16 +1,20 @@
 package of5_2.kode;
 
-public class Dog implements Animal{
+public class Dog implements Animal {
 
     private int age;
 
     private String name;
-    
-    public Dog(int age, String name){
+
+    public Dog(int age, String name) {
         this.age = age;
         this.name = name;
     }
 
+    public Dog(String name, int age) {
+        this.age = age;
+        this.name = name;
+    }
 
     @Override
     public int getAge() {
@@ -29,10 +33,9 @@ public class Dog implements Animal{
         return sound;
     }
 
-    public void eatBone(){
+    public void eatBone() {
         return;
     }
-
 
     @Override
     public String toString() {
@@ -43,5 +46,5 @@ public class Dog implements Animal{
     public int compareTo(Animal o) {
         return this.getAge() - o.getAge();
     }
-    
+
 }
