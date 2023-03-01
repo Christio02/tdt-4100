@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class Farm implements Iterable<Animal> {
+public class Farm implements Iterable<Animal>, Comparable<Farm> {
 
     private List<Animal> animals;
 
@@ -27,8 +27,39 @@ public class Farm implements Iterable<Animal> {
         return animals.iterator();
     }
 
-    public static void main(String[] args) {
+    public int getTotalAge() {
+        return this.getAnimals().stream()
+        .reduce(0, (total, animalAge) -> total + animalAge.getAge(), Integer::sum);
+    }
 
+    public int getTotalAge2() {
+        int sum = 0;
+        for (Animal animal : animals) {
+            sum += animal.getAge();
+        }
+        return sum;
+    }
+
+    public List<String> getAnimalNames() {
+        return this.getAnimals().stream()
+        .map(a -> a.getName())
+        .distinct().toList();
+    }
+
+
+    @Override
+    public int compareTo(Farm anotherFarm) {
+        // if (this.getAnimals().size() > anotherFarm.getAnimals().size()) {
+        //     return 1;
+
+        // } else if (anotherFarm.getAnimals().size() > this.getAnimals().size()) {
+        //     return -1;
+
+        // } else {
+        //     return 0;
+        // }
+
+        return this.getAnimals().size() - anotherFarm.getAnimals().size(); // mindre kode og bedre
     }
 
 }
