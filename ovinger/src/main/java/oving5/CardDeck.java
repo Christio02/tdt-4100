@@ -16,6 +16,7 @@ public class CardDeck implements CardContainer, Iterable<Card>, Predicate<Card>{
 
     private ArrayList<Card> cardDeck = new ArrayList<Card>();;
 
+    
     // constructor
     // if n = 2, then add 8 cards, index: 0-8 (Spare) (1, 2, 3, 4, 5, 6, 7, 8)
     public CardDeck(int n) {
