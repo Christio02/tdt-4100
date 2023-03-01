@@ -26,9 +26,7 @@ public class Main {
         
         // System.out.println(printer.getPrintHistory(clerk1));
         // System.out.println(printer.getPrintHistory(clerk2));
-        System.out.println(clerk1.getTaskCount());
-        System.out.println(clerk2.getTaskCount());
-        System.out.println(manager.getTaskCount());
+        System.out.println(printer.getPrintHistory(clerk1));
 
 
         };
