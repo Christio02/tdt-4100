@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Train {
+public class Train implements Comparable<Train>{
     
     private List<TrainCar> carriages = new ArrayList<>();
 
@@ -34,6 +34,7 @@ public class Train {
         .reduce(0, (total, trainCar) -> total + trainCar.getTotalWeight(), Integer::sum);
     }
 
+
     public int getPassengerCount() { 
         return this.carriages.stream()
         .filter(carriage -> carriage instanceof PassengerCar) // filter on only PassengerCars
@@ -47,6 +48,10 @@ public class Train {
         .reduce(0, (total, carriage) -> total + ((CargoCar)carriage).getCargoWeight(), Integer::sum);
     }
 
+    public List<TrainCar> getTrain() {
+        return this.carriages;
+    }
+
 
     @Override
     public String toString() {
@@ -55,6 +60,12 @@ public class Train {
             results += trainCar.toString();
         }
         return results;
+    }
+
+    
+    @Override
+    public int compareTo(Train anotherTrain) {
+        return this.getTrain().size() - anotherTrain.getTrain().size();
     }
     
 
@@ -70,7 +81,10 @@ public class Train {
         System.out.println(train1);
 
 
+
+
     }
+
 
 
 }
