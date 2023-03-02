@@ -8,7 +8,7 @@ public class StringGridImpl implements StringGrid{
 
     private int rows;
     private int columnCount;
-    private List<List<String>> grid;
+    private List<List<String>> grid; // list of list (2D list)
     
 
     public StringGridImpl(int rows, int columnCount) {
@@ -44,7 +44,7 @@ public class StringGridImpl implements StringGrid{
         if (row < 0 || row >= rows || column < 0 || column >= columnCount) {
             throw new IllegalArgumentException("Row or colunn out of range!");
         }
-        return grid.get(row).get(column);
+        return grid.get(row).get(column); // returns string at row and column x*y
     }
 
     @Override
@@ -52,7 +52,7 @@ public class StringGridImpl implements StringGrid{
         if (row < 0 || row >= rows || column < 0 || column >= columnCount) {
             throw new IllegalArgumentException("Row or colunn out of range!");
         }
-        this.grid.get(row).set(column, element);
+        this.grid.get(row).set(column, element); // sets string at row * column
         
     }
     
