@@ -18,10 +18,10 @@ public class Main {
 
         Manager manager = new Manager(employees);
         System.out.println(manager.getTaskCount());
-        // double value = manager.doCalculations((x, y) -> x + y, 2, 3);
+        manager.doCalculations((x, y) -> x + y, 2, 3);
         // System.out.println(value);
         // System.out.println(manager.getTaskCount());
-        manager.printDocument("Figma");
+        manager.printDocument("Example");
         // System.out.println(manager.getTaskCount());
         
         // System.out.println(printer.getPrintHistory(clerk1));

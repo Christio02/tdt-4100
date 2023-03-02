@@ -26,7 +26,7 @@ public class Printer {
 
     public List<String> getPrintHistory(Employee employee) {
         List<String> printHistory = new ArrayList<String>(); // creates copy
-        if (totalTasks.containsKey(employee)) { // if it has an employee in dictionary 
+        if (totalTasks.containsKey(employee)){ // if it has an employee in dictionary 
             printHistory = new ArrayList<String>(totalTasks.get(employee)); // then add the task from employee
         }
         return printHistory;
