@@ -1,19 +1,27 @@
 package oving7;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class BSU extends SavingsAccount {
 
     private double amountYear; // amount to deposit each years
-    private double treshold; // treshold for maximing uttak
+    private final double initialAmountYear;
+    private List<Double> listOfDeposits = new ArrayList<>();
 
     public BSU(double renteFot, double amountYear) {
         super(renteFot);
         this.amountYear = amountYear;
+        this.initialAmountYear = amountYear;
     
     }
 
     public double getTaxDeduction() {
-        double toDouble = this.balance * 0.2;
-        return this.balance - toDouble;
+        double sumOfDeposits = this.listOfDeposits.stream()
+        .mapToDouble(deposits -> deposits.doubleValue()).sum();
+        return sumOfDeposits * 0.2;
     }
 
     @Override
@@ -22,11 +30,23 @@ public class BSU extends SavingsAccount {
             throw new IllegalArgumentException("Can't deposit less than 0!");
         }
 
-        if ((amount + balance) > amountYear) {
+
+        if ((amount + balance ) > amountYear) {
             throw new IllegalStateException("Can't deposit more than the limit year!");
         }
 
         this.balance += amount;
+        this.listOfDeposits.add(amount);
+
+    }
+
+    @Override
+    public void endYearUpdate() {
+        double increaseDouble = balance * renteFot;
+        balance += increaseDouble;
+        this.amountYear += initialAmountYear;
+
+        this.listOfDeposits.clear();
 
     }
 
@@ -39,16 +59,24 @@ public class BSU extends SavingsAccount {
             throw new IllegalStateException("Can't withdraw more than what's on balance!");
         }
 
+        double sumOfList = this.listOfDeposits.stream()
+        .mapToDouble(deposits -> deposits.doubleValue()).sum();
+
+        if (amount > sumOfList) {
+            throw new IllegalStateException("Can't withdraw more than prevous year deposited!");
+        }
+
         balance -= amount;
     }
 
     public static void main(String[] args) {
-        BSU account1 = new BSU(0.05, 25000);
-        account1.deposit(10000);
-        account1.deposit(20000);
-        account1.endYearUpdate();
-        
-        System.out.println(account1.getBalance());
+        BSU bsu = new BSU(0.05, 25000);
+        bsu.deposit(20000);
+        bsu.withdraw(5000);
+        System.out.println(bsu.getBalance());
+        bsu.endYearUpdate();
+        System.out.println(bsu.getBalance());
     }
+
     
 }
