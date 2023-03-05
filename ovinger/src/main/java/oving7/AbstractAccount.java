@@ -7,6 +7,10 @@ public abstract class AbstractAccount {
     public AbstractAccount(double balance) {
         this.balance = 0;
     }
+
+    public AbstractAccount() {
+        
+    }
     
     public void deposit(double amount) {
         if (amount <= 0) {

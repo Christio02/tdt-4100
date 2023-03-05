@@ -4,8 +4,9 @@ public class CreditAccount extends AbstractAccount {
 
     private double creditLine;
 
-    public CreditAccount(double balance) {
-        super(balance);
+    public CreditAccount(double creditLine) {
+        super();
+        setCreditLine(creditLine);
     }
 
     public double getCreditLine() {
@@ -17,7 +18,7 @@ public class CreditAccount extends AbstractAccount {
             throw new IllegalArgumentException("Can't set creditline to less than 0!");
         }
 
-        if (this.balance < 0 && this.balance + newCreditLine <0) {
+        if (this.balance < 0 && this.balance + newCreditLine < 0) {
             throw new IllegalStateException("New credit line is not enough to cover existing negative balance!");
         }
 
@@ -28,11 +29,12 @@ public class CreditAccount extends AbstractAccount {
 
     @Override
     public void internalWithdraw(double amount) {
-        if (this.balance - amount < this.creditLine) {
-            throw new IllegalStateException("Insufficient  funds and credit line!");
+        if (amount > this.balance + this.creditLine) {
+
+            throw new IllegalStateException("Withdrawal exceeds credit line!");
         }
 
-       this.balance -= amount;
+        this.balance -= amount;
 
        
     }
@@ -40,11 +42,9 @@ public class CreditAccount extends AbstractAccount {
     public static void main(String[] args) {
 
         CreditAccount credit = new CreditAccount(10000);
-        credit.deposit(20000);
-        credit.withdraw(5000);
-        System.out.println( credit.getBalance());
-        credit.withdraw(20000);
-
+        credit.setCreditLine(5000);
+        credit.withdraw(4000);
+        System.out.println(credit.getCreditLine());
 
         
     }
