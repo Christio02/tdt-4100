@@ -89,8 +89,8 @@ public class CoffeeCupTest {
     void testFillCoffee() {
         sub.fillCoffee(10);
         assertEquals(15, sub.getCurrentVolume(), "Wrong value after method was called!");
-        sub.drinkCoffee(10);
-        assertThrows(IllegalArgumentException.class, () -> {
+        sub.drinkCoffee(10); 
+        assertThrows(IllegalArgumentException.class, () -> { // maybe illegal state?
             sub.fillCoffee(16);
         }, "Coffee was spilled! check method!");
     }
