@@ -1,4 +1,4 @@
-package uke10;
+package uke10.delegering;
 
 import java.util.List;
 import java.util.ArrayList;
