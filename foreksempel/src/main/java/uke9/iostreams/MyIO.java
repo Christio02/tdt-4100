@@ -43,7 +43,7 @@ public class MyIO {
 		try (BufferedReader reader = new BufferedReader(new InputStreamReader(is))){
 			while (reader.ready()) {
 				String line = reader.readLine();
-				// System.out.println("Linje: "+line);
+				System.out.println("Linje: "+line);
 				// automatisk lukking pga Closable-argument like etter try.
 			}
 
@@ -53,7 +53,7 @@ public class MyIO {
 	}
 
 	private static void printWriter() {
-		try (PrintWriter writer = new PrintWriter("C:/Users/borgeh/utFil.txt")) {
+		try (PrintWriter writer = new PrintWriter("C:/z/utFil.txt")) {
             writer.println("Tror du de skjønner noe ennå?");
             System.out.println(writer.toString());
         } catch (FileNotFoundException e) {
@@ -96,7 +96,7 @@ public class MyIO {
         /* INPUTSTREAM */
         // InputStream fra fil. Denne bruker 'try with resources', så en slipper å stenge strømmen.
  
-        File initialFile = new File("C:/Users/borgeh/foo.txt"); // Denne vil jo dere måtte legge inn selv.
+        File initialFile = new File("C:/z/tekst.txt"); // Denne vil jo dere måtte legge inn selv.
         // Måten å gjøre ting på under tilsvarer dette i python: with open(fil, 'r') as f
         // En slipper å eksplisitt lukke filen etterpå. 
         try (InputStream inputStream = new FileInputStream(initialFile)) {
@@ -119,12 +119,27 @@ public class MyIO {
 
         /* BUFFEREDINPUTSTREAM */ // Å kjøre ting gjennom tolkere handler om abstraksjon!
 
-        File initialFile2 = new File("C:/Users/borgeh/foo.txt");
-        // try (InputStream inputStream = new FileInputStream(initialFile)) {
-        // try (InputStream inputStream = new URL("http://www.brainjar.com/java/host/test.html").openStream()) {            // try (InputStream inputStream = new URL("http://www.brainjar.com/java/host/test.html").openStream()) {
-        try (InputStream inputStream = new URL("https://www.themealdb.com/api/json/v1/1/random.php").openStream()) {            // try (InputStream inputStream = new URL("http://www.brainjar.com/java/host/test.html").openStream()) {
+        // Her følger en del ulike eksempler på hva slags måter en kan lage en InputStream
+        // og så pumpe det videre inn til en BufferedInputStream. Test det selv, finn noe som
+        // passer for deg.
+
+        // Absolutt sti - vil kreve at filen ligger _akkurat der_ hos deg.
+        try (InputStream inputStream = new FileInputStream(initialFile)) { 
+
+        // Relativ sti - her vil den lete i samme mappe som der klassen MyIO ligger 
+        // try (InputStream inputStream = MyIO.class.getResourceAsStream("flerkamp.txt")) {
+
+        // URL for å lese en lokal fil:
+        // URL fileUrl = MyIO.class.getResource("flerkamp.txt");
+        // try (InputStream inputStream = new FileInputStream(new File(fileUrl.toURI()))) {
+
+
+        // En URL - åpner fra en nettside. 
+        // try (InputStream inputStream = new URL("http://www.brainjar.com/java/host/test.html").openStream()) {            
+        // try (InputStream inputStream = new URL("https://www.themealdb.com/api/json/v1/1/random.php").openStream()) {            
+
             bufferedISR(inputStream);
-            } catch (IOException e) {
+            } catch (Exception e) {
             e.printStackTrace();
         }
 

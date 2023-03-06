@@ -28,7 +28,7 @@ public class Flerkamp {
 	// Statisk folderstruktur for å hente filen. 
 	private void readFile_old() {
 		// Denne må oversettes til akkurat den plassen filen ligger hos deg! 
-		File file = new File("C:/Users/borgeh/Jobb/TDT4100/23test/tdt4100-students-23/foreksempel/src/main/"+
+		File file = new File("C:/Users/borgeha/tdt4100/tdt4100-students-23/foreksempel/src/main/"+
 			"java/uke9/iostreams/flerkamp.txt"); 
 		BufferedReader br;
 		try {
@@ -73,17 +73,6 @@ public class Flerkamp {
 		}
 	}
 
-
-
-	// Denne brukes av begge readFile-variantene. Den parser en streng (linje fra filen) og oppretter et Deltakerobjekt.
-	// Dette mates tilbake i strømmen.
-	private Deltaker fromCols(String...cols) {
-		return new Deltaker(cols[0], Integer.parseInt(cols[1]), 
-				Double.parseDouble(cols[2]), Integer.parseInt(cols[3]), 
-				Integer.parseInt(cols[4]), cols[5]);
-	}
-
-
 	private void scanner_read(InputStream is) {
 		
 		// Absolutt path blir litt mer som dette:
@@ -106,18 +95,27 @@ public class Flerkamp {
 		scanner.close();
 	}
 
+	// Denne brukes av alle readFile-variantene. Den parser en streng (linje fra filen) og oppretter et Deltakerobjekt.
+	// Dette mates tilbake i strømmen.
+	private Deltaker fromCols(String...cols) {
+		return new Deltaker(cols[0], Integer.parseInt(cols[1]), 
+				Double.parseDouble(cols[2]), Integer.parseInt(cols[3]), 
+				Integer.parseInt(cols[4]), cols[5]);
+	}
+
+
 	public static void main(String[] args) throws URISyntaxException {
 		Flerkamp fk = new Flerkamp();
-		// fk.readFile_old();
+		fk.readFile_old();
 		// fk.readFile(); // Leser via stream og legger Deltakere inn i fk!
-		fk.scanner_read(fk.getClass().getResourceAsStream("flerkamp.txt"));
+		// fk.scanner_read(fk.getClass().getResourceAsStream("flerkamp.txt"));
 
 		// System.out.println("antall deltakere: "+fk.deltakere.size());
 
 		// Nå skal alle deltakerne ha blitt lagt inn i listen. Så en enkel stream-måte å skrive dem ut på,
 		// println kaller toString i hvert Deltakerobjekt på veien.
 		fk.deltakere.forEach(System.out::println);
-
+		
 		System.out.println(fk.deltakere.get(3));
 
 

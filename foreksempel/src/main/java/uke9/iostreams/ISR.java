@@ -13,7 +13,7 @@ public class ISR {
     private static void readInputStream() { // Absolutt vs relativ path
         // Statisk klasse, så jeg har ikke noe objekt. Eksempel på annen bruk senere.
         InputStream inputStream = ISR.class.getResourceAsStream("utf8.txt");
-        int byteVerdi = 0;
+        int byteVerdi = 0;  
 		try {
             while ((byteVerdi = inputStream.read()) > 0) { // Denne er fin, tilordne variabel inni while!
             	System.out.println(byteVerdi + " er egentlig \t" + Character.toString((char) byteVerdi));
@@ -42,6 +42,5 @@ public class ISR {
             
             // readInputStream();
             readISR(); // Børge: For å vise kinesiske tegn, skriv dette i terminalvinduet: chcp 65001
-            
         }
 }
