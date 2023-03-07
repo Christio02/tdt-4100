@@ -14,8 +14,8 @@ public class Feiltyper {
 
 
 		// Nullpointerexception:
-		// String foo = null;
-		// int length = foo.length();   
+		String foo = null;
+		int length = foo.length();   
 
 		// Classcastexception:
 		// Object i = Integer.valueOf(42);

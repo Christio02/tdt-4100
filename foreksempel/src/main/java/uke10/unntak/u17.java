@@ -26,7 +26,7 @@ public class u17 {
     }
     
     public static void main(String[] args) {
-        method1("3");
+        // method1("3");
         method1("hei");
         // throw new RuntimeException(); marker unntaket, trykk på F4 for å se klassehierarki.
 
