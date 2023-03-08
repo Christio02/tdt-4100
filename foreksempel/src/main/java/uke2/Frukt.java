@@ -7,7 +7,9 @@ public class Frukt {
 
 	String type;   // Navnet på hver frukt 
 	double antall; // Mengden. Double betyr flyttall (float i Python). 
+
 	//int for bare hele frukt.
+
 
 	// Dette kalles en konstruktør. Den sier noe om hvordan man kan lage nye
 	// objekter av typen Frukt. Vi kan ha flere av dem. Her er det bare en,

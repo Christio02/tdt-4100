@@ -78,6 +78,7 @@ public class CardDeck {
 
     // move cards from cardDeck object to cardHand class (object)
 
+
     public void deal(CardHand hand, int n) {
         // code goes here, should call a remove card method and add it
         // to the cardHand object
@@ -92,7 +93,6 @@ public class CardDeck {
     @Override
     public String toString() {
         return "CardDeck [cardDeck=" + cardDeck + "]";
-    }
 
     public static void main(String[] args) {
         CardDeck c1 = new CardDeck(3);

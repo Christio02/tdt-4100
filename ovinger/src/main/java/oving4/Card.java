@@ -1,7 +1,6 @@
 package oving4;
 
 
-
 public class Card {
     private int value;
     private char color;

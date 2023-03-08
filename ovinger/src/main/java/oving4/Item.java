@@ -3,6 +3,7 @@ package oving4;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class Item {
 
@@ -20,7 +21,7 @@ public class Item {
             throw new IllegalArgumentException("Name cannot be empty, or type is illegal, price cannot be 0");
         }
 
-        this.name = name;
+        this.name = Objects.requireNonNull(name);
         this.type = type;
         setPrice(price);
     }

@@ -160,11 +160,13 @@ public class Person {
     }
 
     public static void main(String[] args) {
+
         Person p1 = new Person();
         p1.setName("Christopher Hoee");
-        p1.setEmail("christopher.hoee@gmail.com");
+        p1.setEmail("christopher.hoee@gmail.no");
         p1.setGender('M');
         System.out.println(p1);
+
 
     }
 
