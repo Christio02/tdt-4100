@@ -1,0 +1,7 @@
+Delegeringsteknikk:
+- Er en teknikk innenfor objekt-orientert programmering, hvor en klasse/objekt vil delegere en oppgave til en annne hjelpeklasse
+I denne øvingen så vil foreksempel en clerk delegere printer oppgaven til et printer objekt
+
+Observatør-observert-teknikk:
+- Er en teknikk hvor man har Observatører som får oppdateringer hvis tilstanden til observert objektene endres
+- E.g. en stockindex får oppdatering fra stock objekter om prisendring

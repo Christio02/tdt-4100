@@ -14,3 +14,9 @@ target/
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 .project
+
+# This needs to be ignored because it is modified automatically by VSCode
+.vscode/launch.json
+
+
+.fake

@@ -1,0 +1,5 @@
+- Foreslå en alternativ innkapsling av navnet. Hint: del opp.
+- Kan heller lage fornavn og etternavn felt, og så skriver brukeren inn fornavn og etternavn hver for seg
+
+-Foreslå to alternative strategier for å kapsle inn tilstand som er koblet slik navn og e-post er. Hint: 1) samtidig og 2) dekoble.
+- Kan f.eks innkapsle tilstander i samme metode, eller separaere de

@@ -1,7 +1,7 @@
 package uke3;
 
 public class Person {
-    private String navn;
+    String navn;
     private int alder;
 
     public Person(String navn, int alder) {

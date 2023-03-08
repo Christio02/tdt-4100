@@ -16,6 +16,7 @@ public class Storage {
         if (i < liste.size()) {
             return liste.get(i);
         }
+        return null;
     }
 
 
