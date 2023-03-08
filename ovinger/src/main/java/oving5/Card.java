@@ -47,4 +47,8 @@ public class Card implements Comparable<Card> {
         return color + "" + value;
     }
 
+    @Override
+    public int compareTo(Card o) {
+        return 0;
+    }
 }

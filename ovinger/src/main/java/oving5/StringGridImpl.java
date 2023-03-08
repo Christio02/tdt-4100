@@ -58,7 +58,7 @@ public class StringGridImpl implements StringGrid{
     
     @Override
     // this code essentially visualizes the grid
-    public String toString() {
+    public String toString() {  
     StringBuilder sb = new StringBuilder();
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < columnCount; j++) {

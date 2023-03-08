@@ -85,8 +85,7 @@ public class CardDeck implements CardContainer, Iterable<Card>, Predicate<Card>{
         System.out.println(card); // print out each card object from cardDeck
        }
 
-       CardHand c2 = new CardHand();
-       CardContainerIterator iterator2 = new CardContainerIterator(c2);
+       CardContainerIterator iterator2 = new CardContainerIterator();
        while (iterator2.hasNext()) {
         Card card2 = iterator2.next();
         System.out.println(card2);
