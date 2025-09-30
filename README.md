@@ -1,9 +1,8 @@
 # Student-repo TDT4100 V2023
 
-Dette repoet inneholder prosjekter for bruk i faget TDT4100 - Objektorientert Programmering.
-Følgende prosjekter er definert:
+This repo contains projects and tasks within the course TDT4100 - Object-oriented programming based on the language Java
 
-- **foreksempel**: Her kommer eksempler fra forelesninger
-- **minegenkode**: Her kan du lagre din egen kode, som ikke nødvendigvis har noe med faget å gjøre
-- **lf**: Her kommer løsningsforslag for øvingene
-- **ovinger**: Her skal du skrive kode for øvingene i faget. Tester for øvingene kommer også her.
+- **foreksempel**: Examples from lectures
+- **minegenkode**: My own code for practicing the different topics and tasks
+- **lf**: Solutions for homework
+- **ovinger**: My own solutions for the homework
